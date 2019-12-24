@@ -8,8 +8,8 @@ import IconLink from "../components/iconLink.js"
 export default () => (
   <Container>
     <Link to="/about/">About</Link>
-    <Header headerText="This is a Header." />
-    <p>^-- THAT"S A HEADER!!1!</p>
+    <Header headerText="Enoch Chen" />
+    <p>CS @ Cornell</p>
     <img
       src={Meme}
       alt="Meme"
@@ -18,26 +18,25 @@ export default () => (
     <h1>Users</h1>
     <div style={{ display: "flex", justifyContent: "space-between", textAlign:"center" }}>
       <IconLink
-        text="Google"
+        text="Projects"
         icon="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-        link="http://google.com"
+        link="#"
       />
       <IconLink
         text="Github"
         icon="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-        link="http://github.com"
+        link="http://github.com/Enochen"
       />
       <IconLink
         text="LinkedIn"
         icon="https://randomuser.me/api/portraits/men/97.jpg"
-        link="http://github.com/Enochen"
+        link="https://www.linkedin.com/in/enochen728/"
       />
       <IconLink
         text="Resume"
         icon="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-        link="http://bing.com"
+        link="/Enoch Chen cv.pdf"
       />
     </div>
-    <Header headerText="This is another Header - (should probably be a footer)" />
   </Container>
 )
