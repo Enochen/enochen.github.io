@@ -9,13 +9,12 @@ export default () => (
   <Container>
     <Link to="/about/">About</Link>
     <Header headerText="Enoch Chen" />
-    <p>CS @ Cornell</p>
+    <p>cs @ cornell</p>
     <img
       src={Meme}
       alt="Meme"
       style={{ height: "inherit", width: "inherit" }}
     />
-    <h1>Users</h1>
     <div style={{ display: "flex", justifyContent: "space-between", textAlign:"center" }}>
       <IconLink
         text="Projects"
