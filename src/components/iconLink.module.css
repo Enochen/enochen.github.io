@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 12px auto;
+}
+
+.link:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  margin: 0;
+}
+
+.text {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
