@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Header from "../components/header"
 import Meme from "../images/meme.jpg"
 import Container from "../components/container"
@@ -7,7 +6,6 @@ import IconLink from "../components/iconLink.js"
 
 export default () => (
   <Container>
-    <Link to="/about/">About</Link>
     <Header headerText="Enoch Chen" />
     <p>cs @ cornell</p>
     <img
