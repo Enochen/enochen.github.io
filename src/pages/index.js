@@ -3,6 +3,7 @@ import Header from "../components/header"
 import Meme from "../images/meme.jpg"
 import Container from "../components/container"
 import IconLink from "../components/iconLink.js"
+import IconGroup from "../components/iconGroup"
 
 export default () => (
   <Container>
@@ -13,7 +14,7 @@ export default () => (
       alt="Meme"
       style={{ height: "inherit", width: "inherit" }}
     />
-    <div style={{ display: "flex", justifyContent: "space-between", textAlign:"center" }}>
+    <IconGroup>
       <IconLink
         text="Projects"
         icon="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
@@ -34,6 +35,6 @@ export default () => (
         icon="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
         link="/Enoch Chen cv.pdf"
       />
-    </div>
+    </IconGroup>
   </Container>
 )
