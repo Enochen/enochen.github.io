@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../components/header"
+import Header from "../components/nameHeader"
 import Meme from "../images/meme.jpg"
 import Container from "../components/container"
 import IconLink from "../components/iconLink.js"
@@ -10,8 +10,7 @@ export default () => (
     <div style={{maxWidth:"800px"}}>
     <div style={{
     justifyContent: "center"}}>
-      <Header headerText="Enoch Chen" />
-      <p>cs @ cornell</p>
+      <Header heading="Enoch Chen" subHeading="cs@cornell" />
       {<img
         src={Meme}
         alt="Meme"
