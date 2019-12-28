@@ -7,13 +7,17 @@ import IconGroup from "../components/iconGroup"
 
 export default () => (
   <Container>
-    <Header headerText="Enoch Chen" />
-    <p>cs @ cornell</p>
-    <img
-      src={Meme}
-      alt="Meme"
-      style={{ height: "inherit", width: "inherit" }}
-    />
+    <div style={{maxWidth:"800px"}}>
+    <div style={{
+    justifyContent: "center"}}>
+      <Header headerText="Enoch Chen" />
+      <p>cs @ cornell</p>
+      {<img
+        src={Meme}
+        alt="Meme"
+        style={{ height: "25%", width: "25%" }}
+      />}
+    </div>
     <IconGroup>
       <IconLink
         text="Projects"
@@ -36,5 +40,6 @@ export default () => (
         link="/Enoch Chen cv.pdf"
       />
     </IconGroup>
+    </div>
   </Container>
 )
