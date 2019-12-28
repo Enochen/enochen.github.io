@@ -1,22 +1,13 @@
 import React from "react"
 import Header from "../components/nameHeader"
 import Meme from "../images/meme.jpg"
-import Container from "../components/container"
+import Section from "../components/section"
 import IconLink from "../components/iconLink.js"
 import IconGroup from "../components/iconGroup"
 
 export default () => (
-  <Container>
-    <div style={{maxWidth:"800px"}}>
-    <div style={{
-    justifyContent: "center"}}>
-      <Header heading="Enoch Chen" subHeading="cs@cornell" />
-      {<img
-        src={Meme}
-        alt="Meme"
-        style={{ height: "25%", width: "25%" }}
-      />}
-    </div>
+  <Section>
+    <Header heading="Enoch Chen" subHeading="CS @ Cornell" />
     <IconGroup>
       <IconLink
         text="Projects"
@@ -39,6 +30,5 @@ export default () => (
         link="/Enoch Chen cv.pdf"
       />
     </IconGroup>
-    </div>
-  </Container>
+  </Section>
 )

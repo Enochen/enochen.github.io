@@ -1,10 +1,10 @@
 import Typography from "typography"
-import fairyGateTheme from "typography-theme-fairy-gates"
-fairyGateTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+import moraga from "typography-theme-moraga"
+moraga.overrideThemeStyles = ({ rhythm }, options) => ({
   'h1,h2': {
-    margin: 0
+    marginBottom: rhythm(1/3)
   }
 })
-const typography = new Typography(fairyGateTheme)
+const typography = new Typography(moraga)
 export const { scale, rhythm, options } = typography
 export default typography
