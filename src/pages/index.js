@@ -1,9 +1,10 @@
 import React from "react"
 import Header from "../components/nameHeader"
-import Meme from "../images/meme.jpg"
 import Section from "../components/section"
 import IconLink from "../components/iconLink.js"
 import IconGroup from "../components/iconGroup"
+import { IconContext } from "react-icons";
+import { FaGithub, FaNewspaper, FaLinkedin, FaEnvelope, FaHammer } from 'react-icons/fa';
 
 export default () => (
   <Section>
@@ -11,22 +12,22 @@ export default () => (
     <IconGroup>
       <IconLink
         text="Projects"
-        icon="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+        icon={FaHammer}
         link="#"
       />
       <IconLink
         text="Github"
-        icon="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+        icon={FaGithub}
         link="http://github.com/Enochen"
       />
       <IconLink
         text="LinkedIn"
-        icon="https://randomuser.me/api/portraits/men/97.jpg"
+        icon={FaLinkedin}
         link="https://www.linkedin.com/in/enochen728/"
       />
       <IconLink
         text="Resume"
-        icon="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+        icon={FaNewspaper}
         link="/Enoch Chen cv.pdf"
       />
     </IconGroup>
