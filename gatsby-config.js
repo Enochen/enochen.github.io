@@ -5,6 +5,11 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Enoch Chen`,
+    siteUrl: `https://enochen.me`,
+    description: `Hey! I'm Enoch - I do some cool things.`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
