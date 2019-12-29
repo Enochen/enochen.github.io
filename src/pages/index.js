@@ -1,8 +1,9 @@
 import React from "react"
-import Header from "../components/nameHeader"
+import BigName from "../components/intro/nameHeader"
 import Section from "../components/section"
-import IconLink from "../components/iconLink.js"
-import IconGroup from "../components/iconGroup"
+import IconLink from "../components/intro/iconLink"
+import IconGroup from "../components/intro/iconGroup"
+import Title from "../components/title"
 import {
   FaGithub,
   FaNewspaper,
@@ -13,24 +14,24 @@ import {
 
 const Heading = () => (
   <Section>
-    <Header heading="Enoch Chen" subHeading="cs @ cornell" />
+    <BigName name="Enoch Chen" desc="cs @ cornell" />
     <IconGroup>
-      <IconLink text="About" icon={FaUser} link="#about" />
-      <IconLink text="Projects" icon={FaFlask} link="#projects" />
+      <IconLink label="About" icon={FaUser} link="#about" />
+      <IconLink label="Projects" icon={FaFlask} link="#projects" />
       <IconLink
-        text="Github"
+        label="Github"
         icon={FaGithub}
         link="http://github.com/Enochen"
         external={true}
       />
       <IconLink
-        text="LinkedIn"
+        label="LinkedIn"
         icon={FaLinkedin}
         link="https://www.linkedin.com/in/enochen728/"
         external={true}
       />
       <IconLink
-        text="Resume"
+        label="Resume"
         icon={FaNewspaper}
         link="/Enoch Chen cv.pdf"
         external={true}
@@ -39,11 +40,14 @@ const Heading = () => (
   </Section>
 )
 
-const Projects = () => <div id="projects"></div>
+const Projects = () => (
+  <Section id="projects" wide={true}>
+    <Title text="Projects"></Title>
+  </Section>
+)
 
 export default () => (
   <>
     <Heading />
-    <Projects />
   </>
 )

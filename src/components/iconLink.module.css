@@ -1,9 +1,0 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  margin: auto;
-}
-
-.link:hover {
-  text-decoration: none;
-}

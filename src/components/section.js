@@ -1,8 +1,31 @@
 import React from "react"
-import styles from "./section.module.css"
+import styled from "styled-components"
 
-export default ({ children }) => (
-  <div className={styles.section}>
-    <div className={styles.wrapper}>{children}</div>
-  </div>
-)
+const Section = styled.div`
+  justify-content: center;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 100vh;
+`
+
+const DefaultWrapper = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+`
+
+const WideWrapper = styled(DefaultWrapper)`
+  max-width: 1000px;
+`
+
+export default ({ id, children, wide = false }) => {
+  const Wrapper = wide ? WideWrapper : DefaultWrapper
+  return (
+    <Section id={id}>
+      <Wrapper>{children}</Wrapper>
+    </Section>
+  )
+}
