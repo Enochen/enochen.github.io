@@ -13,6 +13,8 @@ import {
   FaFlask,
 } from "react-icons/fa"
 import { createGlobalStyle } from "styled-components"
+import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -55,9 +57,20 @@ const Projects = () => (
   </Section>
 )
 
-export default () => (
+export default ({ data }) => (
   <>
+    <Helmet title="Enoch Chen" defer={false} />
     <GlobalStyle />
     <Heading />
   </>
 )
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
