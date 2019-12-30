@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
 export default ({ data }) => (
   <>
-    <Helmet defaultTitle="Enoch Chen - 404" defer={false}>
+    <Helmet defer={false}>
       <title>{data.site.siteMetadata.title} - 404</title>
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>

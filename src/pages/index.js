@@ -70,12 +70,11 @@ const Projects = () => (
 
 export default ({ data }) => (
   <>
-    <Helmet defaultTitle="Enoch Chen" defer={false}>
+    <Helmet defer={false}>
       <title>{data.site.siteMetadata.title}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
     <GlobalStyle />
     <Heading />
-    <Projects />
   </>
 )
