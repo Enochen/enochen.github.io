@@ -16,6 +16,17 @@ import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`
+
 const GlobalStyle = createGlobalStyle`
   html {
     background-color: #f3f3f3;
@@ -59,18 +70,12 @@ const Projects = () => (
 
 export default ({ data }) => (
   <>
-    <Helmet title="Enoch Chen" defer={false} />
+    <Helmet defaultTitle="Enoch Chen" defer={false}>
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
+    </Helmet>
     <GlobalStyle />
     <Heading />
+    <Projects />
   </>
 )
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
