@@ -32,7 +32,7 @@ const theme = {
         fontWeight: options.headerWeight,
       },
       "h1, h2": {
-        marginBottom: rhythm(1 / 4),
+        margin: 0,
       },
       a: {
         color: "#419eda",

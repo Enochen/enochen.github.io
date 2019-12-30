@@ -6,11 +6,9 @@ const Section = styled.div`
   display: flex;
   box-sizing: border-box;
   min-height: 100vh;
-  background: #f3f3f3;
 `
 
 const DefaultWrapper = styled.div`
-  text-align: center;
   display: flex;
   flex-direction: column;
   width: 100%;

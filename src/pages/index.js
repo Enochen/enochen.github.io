@@ -4,6 +4,7 @@ import Section from "../components/section"
 import IconLink from "../components/intro/iconLink"
 import IconGroup from "../components/intro/iconGroup"
 import Title from "../components/title"
+import Project from "../components/project/project"
 import {
   FaGithub,
   FaNewspaper,
@@ -11,6 +12,13 @@ import {
   FaUser,
   FaFlask,
 } from "react-icons/fa"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    background-color: #f3f3f3;
+  }
+`
 
 const Heading = () => (
   <Section>
@@ -43,11 +51,13 @@ const Heading = () => (
 const Projects = () => (
   <Section id="projects" wide={true}>
     <Title text="Projects"></Title>
+    <Project></Project>
   </Section>
 )
 
 export default () => (
   <>
+    <GlobalStyle />
     <Heading />
   </>
 )
