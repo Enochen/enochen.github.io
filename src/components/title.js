@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "./title.module.css"
 import styled from "styled-components"
 
 const Title = styled.div`
