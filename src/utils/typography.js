@@ -7,6 +7,7 @@ const theme = {
   title: "Lilac",
   baseFontSize: "18px",
   baseLineHeight: 1.56,
+  fontDisplay: 'swap',
   googleFonts: [
     {
       name: "Source Sans Pro",
