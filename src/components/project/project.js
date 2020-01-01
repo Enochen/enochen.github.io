@@ -1,5 +1,6 @@
 import React from "react"
 import Body from "./body"
+import Pic from "./pic"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -14,5 +15,6 @@ const Wrapper = styled.div`
 export default () => (
   <Wrapper>
     <Body name="Henlo" desc="whatup"></Body>
+    <Pic background="https://maximpekarsky.com/assets/images/project_images/hackterms.gif" url="https://google.com"/>
   </Wrapper>
 )

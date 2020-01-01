@@ -1,5 +1,6 @@
 import React from "react"
 import Tags from "./tags"
+import Links from "./links"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -25,7 +26,13 @@ const Description = styled(Subsection)`
 export default ({ name, desc }) => (
   <Wrapper>
     <Name>{name}</Name>
-    <Tags data={["React", "Gatsby"]}></Tags>
+    <Tags data={["React", "Gatsby"]} />
     <Description>{desc}</Description>
+    <Links
+      data={[
+        { link: "https://google.com", label: "Google" },
+        { link: "https://google.com", label: "Google2" },
+      ]}
+    />
   </Wrapper>
 )

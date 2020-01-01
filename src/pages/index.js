@@ -76,5 +76,6 @@ export default ({ data }) => (
     </Helmet>
     <GlobalStyle />
     <Heading />
+    <Projects />
   </>
 )

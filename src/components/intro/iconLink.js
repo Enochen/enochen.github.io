@@ -13,7 +13,7 @@ const Link = styled.a`
 
 const Label = styled.div``
 
-export default ({ icon, external, link, label }) => {
+export default ({ icon, external = false, link, label }) => {
   const Icon = icon
   const iconSize = 42
   const ext = external
