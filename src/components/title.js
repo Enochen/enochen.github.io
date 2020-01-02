@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1`
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 `
 
 export default ({ text }) => (

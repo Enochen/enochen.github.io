@@ -19,6 +19,6 @@ const Tag = styled.div`
 `
 
 export default ({ data }) => {
-  const tags = data.map(x => <Tag>{x}</Tag>)
+  const tags = data.map(x => <Tag key={x}>{x}</Tag>)
   return <Wrapper>{tags}</Wrapper>
 }

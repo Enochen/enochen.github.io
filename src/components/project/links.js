@@ -21,10 +21,10 @@ const Link = styled.a`
 `
 
 export default ({ data }) => {
-  const tags = data.map(x => (
-    <Link href={x.link} {...ext}>
+  const links = data.map(x => (
+    <Link key={x.label} href={x.label} {...ext}>
       {x.label}
     </Link>
   ))
-  return <Wrapper>{tags}</Wrapper>
+  return <Wrapper>{links}</Wrapper>
 }
