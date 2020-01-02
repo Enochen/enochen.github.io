@@ -61,21 +61,52 @@ const Heading = () => (
   </Section>
 )
 
-const Projects = () => (
-  <Section id="projects" wide={true}>
-    <Title text="Projects"></Title>
-    <Project></Project>
-  </Section>
-)
+const Projects = ({ datas }) => {
+  const projects = datas.map(projData => <Project {...projData} />)
+  return (
+    <Section id="projects" wide={true}>
+      <Title text="Projects"></Title>
+      {projects}
+    </Section>
+  )
+}
 
-export default ({ data }) => (
-  <>
-    <Helmet defer={false}>
-      <title>{data.site.siteMetadata.title}</title>
-      <meta name="description" content={data.site.siteMetadata.description} />
-    </Helmet>
-    <GlobalStyle />
-    <Heading />
-    <Projects />
-  </>
-)
+export default ({ data }) => {
+  const projects = [
+    {
+      name: "Henlo",
+      desc: "whatup",
+      tags: ["React", "Gatsby"],
+      links: [
+        { url: "https://google.com", label: "Google" },
+        { url: "https://google.com", label: "Google2" },
+      ],
+      background:
+        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
+      url: "https://google.com",
+    },
+    {
+      name: "Henlo2",
+      desc: "whatup",
+      tags: ["React", "Gatsby"],
+      links: [
+        { url: "https://google.com", label: "Google" },
+        { url: "https://google.com", label: "Google2" },
+      ],
+      background:
+        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
+      url: "https://google.com",
+    },
+  ]
+  return (
+    <>
+      <Helmet defer={false}>
+        <title>{data.site.siteMetadata.title}</title>
+        <meta name="description" content={data.site.siteMetadata.description} />
+      </Helmet>
+      <GlobalStyle />
+      <Heading />
+      <Projects datas={projects} />
+    </>
+  )
+}

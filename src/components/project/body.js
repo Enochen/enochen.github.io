@@ -23,16 +23,13 @@ const Description = styled(Subsection)`
   line-height: 1.4;
 `
 
-export default ({ name, desc }) => (
+export default ({ name, desc, tags, links }) => (
   <Wrapper>
     <Name>{name}</Name>
-    <Tags data={["React", "Gatsby"]} />
+    <Tags data={tags} />
     <Description>{desc}</Description>
     <Links
-      data={[
-        { link: "https://google.com", label: "Google" },
-        { link: "https://google.com", label: "Google2" },
-      ]}
+      data={links}
     />
   </Wrapper>
 )

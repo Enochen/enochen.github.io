@@ -22,7 +22,7 @@ const Link = styled.a`
 
 export default ({ data }) => {
   const links = data.map(x => (
-    <Link key={x.label} href={x.label} {...ext}>
+    <Link key={x.label} href={x.url} {...ext}>
       {x.label}
     </Link>
   ))
