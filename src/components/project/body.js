@@ -23,13 +23,17 @@ const Description = styled(Subsection)`
   line-height: 1.4;
 `
 
-export default ({ name, desc, tags, links }) => (
-  <Wrapper>
-    <Name>{name}</Name>
-    <Tags data={tags} />
-    <Description>{desc}</Description>
-    <Links
-      data={links}
-    />
-  </Wrapper>
-)
+export default ({ name, desc, tags, github, live }) => {
+  const links = [
+    ...(live ? [{ label: "Project", url: live }] : []),
+    ...(github ? [{ label: "Github", url: github }] : []),
+  ]
+  return (
+    <Wrapper>
+      <Name>{name}</Name>
+      <Tags data={tags} />
+      <Description>{desc}</Description>
+      <Links data={links} />
+    </Wrapper>
+  )
+}

@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaUser,
   FaFlask,
+  FaGraduationCap,
 } from "react-icons/fa"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
@@ -57,6 +58,12 @@ const Heading = () => (
         link="/Enoch Chen cv.pdf"
         external={true}
       />
+      <IconLink
+        label="Transcript"
+        icon={FaGraduationCap}
+        link="/2019-12-31-Transcript.pdf"
+        external={true}
+      />
     </IconGroup>
   </Section>
 )
@@ -74,14 +81,12 @@ const Projects = ({ datas }) => {
 export default ({ data }) => {
   const projects = [
     {
-      name: "Henlo",
-      desc: "whatup",
+      name: "Ask Palette",
+      desc: "Ever wonder what \"Power\" looks like? What about ",
       tags: ["React", "Gatsby"],
-      links: [
-        { url: "https://google.com", label: "Google" },
-        { url: "https://google.com", label: "Google2" },
-      ],
-      background:
+      live: "http://askpalette.appspot.com/",
+      github: "https://github.com/Enochen/askpalette",
+      image:
         "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
       url: "https://google.com",
     },
@@ -89,11 +94,19 @@ export default ({ data }) => {
       name: "Henlo2",
       desc: "whatup",
       tags: ["React", "Gatsby"],
-      links: [
-        { url: "https://google.com", label: "Google" },
-        { url: "https://google.com", label: "Google2" },
-      ],
-      background:
+      live: "https://google.com",
+      github: "https://google.com",
+      image:
+        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
+      url: "https://google.com",
+    },
+    {
+      name: "Henlo3",
+      desc: "whatup",
+      tags: ["React", "Gatsby"],
+      live: "https://google.com",
+      github: "https://google.com",
+      image:
         "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
       url: "https://google.com",
     },

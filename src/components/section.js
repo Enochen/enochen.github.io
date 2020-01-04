@@ -6,6 +6,7 @@ const Section = styled.div`
   display: flex;
   box-sizing: border-box;
   min-height: 100vh;
+  padding-bottom: 5vh;
 `
 
 const DefaultWrapper = styled.div`

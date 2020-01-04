@@ -12,6 +12,6 @@ const Pic = styled.a(({background})=>`
   background: url(${background}) center center / cover no-repeat rgb(0, 0, 0);
 `,)
 
-export default ({ background, url }) => {
-  return <Pic background={background} href={url} {...ext}/>
+export default ({ image, url }) => {
+  return <Pic background={image} href={url} {...ext}/>
 }
