@@ -3,7 +3,14 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: auto;
+  padding-top: 0%;
+  padding-bottom: 12vh;
+`
+
+const IconWrapper = styled.div`
   margin: auto;
 `
 
@@ -13,8 +20,8 @@ const Link = styled.a`
 
 const Label = styled.div``
 
-export default ({ icon, external = false, link, label }) => {
-  const Icon = icon
+const Icon = ({ icon, external = false, link, label }) => {
+  const IconType = icon
   const iconSize = 42
   const ext = external
     ? {
@@ -23,11 +30,16 @@ export default ({ icon, external = false, link, label }) => {
       }
     : {}
   return (
-    <Wrapper>
+    <IconWrapper>
       <Link href={link} {...ext}>
-        <Icon size={iconSize} />
+        <IconType size={iconSize} />
         <Label>{label}</Label>
       </Link>
-    </Wrapper>
+    </IconWrapper>
   )
+}
+
+export default ({ data }) => {
+  const icons = data.map(x => <Icon {...x}></Icon>)
+  return <Wrapper>{icons}</Wrapper>
 }

@@ -1,8 +1,7 @@
 import React from "react"
-import BigName from "../components/intro/nameHeader"
+import BigName from "../components/intro/header"
 import Section from "../components/section"
-import IconLink from "../components/intro/iconLink"
-import IconGroup from "../components/intro/iconGroup"
+import IconGroup from "../components/intro/icons"
 import Title from "../components/title"
 import Project from "../components/project/project"
 import {
@@ -34,36 +33,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Heading = () => (
+const Intro = ({ name, desc, iconData }) => (
   <Section>
-    <BigName name="Enoch Chen" desc="cs @ cornell" />
-    <IconGroup>
-      <IconLink label="About" icon={FaUser} link="#about" />
-      <IconLink label="Projects" icon={FaFlask} link="#projects" />
-      <IconLink
-        label="Github"
-        icon={FaGithub}
-        link="http://github.com/Enochen"
-        external={true}
-      />
-      <IconLink
-        label="LinkedIn"
-        icon={FaLinkedin}
-        link="https://www.linkedin.com/in/enochen728/"
-        external={true}
-      />
-      <IconLink
-        label="Resume"
-        icon={FaNewspaper}
-        link="/Enoch Chen cv.pdf"
-        external={true}
-      />
-      <IconLink
-        label="Transcript"
-        icon={FaGraduationCap}
-        link="/2019-12-31-Transcript.pdf"
-        external={true}
-      />
+    <BigName name={name} desc={desc} />
+    <IconGroup data={iconData}>
+      
     </IconGroup>
   </Section>
 )
@@ -79,10 +53,53 @@ const Projects = ({ projData }) => {
 }
 
 export default ({ data }) => {
-  const projData = [
+  const introData = {
+    name: "Enoch Chen",
+    desc: "cs @ cornell",
+    iconData: [
+      {
+        label: "About",
+        icon: FaUser,
+        link: "#about",
+        external: false,
+      },
+      {
+        label: "Projects",
+        icon: FaFlask,
+        link: "#projects",
+        external: false,
+      },
+      {
+        label: "Github",
+        icon: FaGithub,
+        link: "http://github.com/Enochen",
+        external: true,
+      },
+      {
+        label: "LinkedIn",
+        icon: FaLinkedin,
+        link: "https://www.linkedin.com/in/enochen728/",
+        external: true,
+      },
+      {
+        label: "Resume",
+        icon: FaNewspaper,
+        link: "/Enoch Chen cv.pdf",
+        external: true,
+      },
+      {
+        label: "Transcript",
+        icon: FaGraduationCap,
+        link: "/2019-12-31-Transcript.pdf",
+        external: true,
+      },
+    ],
+  }
+
+  const allProjects = [
     {
       name: "Ask Palette",
-      desc: "Ever wonder what \"Power\" looks like? What about ",
+      desc: 'Ever wonder what "Power" looks like? What about ',
       tags: ["React", "Gatsby"],
       live: "http://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
@@ -118,8 +135,8 @@ export default ({ data }) => {
         <meta name="description" content={data.site.siteMetadata.description} />
       </Helmet>
       <GlobalStyle />
-      <Heading />
-      <Projects projData={projData} />
+      <Intro {...introData} />
+      <Projects projData={allProjects} />
     </>
   )
 }

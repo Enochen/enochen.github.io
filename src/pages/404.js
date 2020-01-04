@@ -1,5 +1,5 @@
 import React from "react"
-import BigName from "../components/intro/nameHeader"
+import BigName from "../components/intro/header"
 import Section from "../components/section"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
