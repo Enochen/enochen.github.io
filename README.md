@@ -1,2 +1,5 @@
-# enochen.github.io
-personal site (wip)
+# enochen.me
+
+## (wip)
+
+Uses GatsbyJS to generate a blazing fast personal site.
