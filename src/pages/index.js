@@ -90,7 +90,7 @@ export default ({ data }) => {
       {
         label: "Transcript",
         icon: FaGraduationCap,
-        link: "/2019-12-31-Transcript.pdf",
+        link: "/2020-01-04-Transcript.pdf",
         external: true,
       },
     ],
@@ -136,7 +136,6 @@ export default ({ data }) => {
       </Helmet>
       <GlobalStyle />
       <Intro {...introData} />
-      <Projects projData={allProjects} />
     </>
   )
 }
