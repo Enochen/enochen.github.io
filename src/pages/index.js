@@ -68,8 +68,8 @@ const Heading = () => (
   </Section>
 )
 
-const Projects = ({ datas }) => {
-  const projects = datas.map(projData => <Project {...projData} />)
+const Projects = ({ projData }) => {
+  const projects = projData.map(project => <Project {...project} />)
   return (
     <Section id="projects" wide={true}>
       <Title text="Projects"></Title>
@@ -79,7 +79,7 @@ const Projects = ({ datas }) => {
 }
 
 export default ({ data }) => {
-  const projects = [
+  const projData = [
     {
       name: "Ask Palette",
       desc: "Ever wonder what \"Power\" looks like? What about ",
@@ -119,7 +119,7 @@ export default ({ data }) => {
       </Helmet>
       <GlobalStyle />
       <Heading />
-      <Projects datas={projects} />
+      <Projects projData={projData} />
     </>
   )
 }
