@@ -80,15 +80,15 @@ export default ({ data }) => {
         external: true,
       },
       {
-        label: "Resume",
-        icon: FaNewspaper,
-        link: "/Enoch Chen cv.pdf",
-        external: true,
-      },
-      {
         label: "Transcript",
         icon: FaGraduationCap,
         link: "/2020-01-04-Transcript.pdf",
+        external: true,
+      },
+      {
+        label: "Resume",
+        icon: FaNewspaper,
+        link: "/Enoch Chen cv.pdf",
         external: true,
       },
     ],
@@ -96,8 +96,19 @@ export default ({ data }) => {
 
   const allProjects = [
     {
+      name: "cue",
+      desc:
+        "I joined Cornell Design & Tech Initiative in Fall 2019 as a Full Stack Developer. My subteam is responsible for cue, an events app for Cornell students. I worked on a set of scripts that populated our event database with external data.",
+      tags: ["HTML/CSS", "Javascript", "Python", "ReactJS", "Django"],
+      live: "https://www.cornelldti.org/Projects/events",
+      github: "https://github.com/cornell-dti/events-backend/",
+      image:
+        "https://www.cornelldti.org/public/pages/projects/pages/events/feature1.jpg",
+    },
+    {
       name: "Ask Palette",
-      desc: "Generate color palettes from your search terms! Uses Google Cloud Vision to extract colors from search terms. Developed as a hackathon project at BigRed//Hacks.",
+      desc:
+        "Generate color palettes from your search terms! Uses Google Cloud Vision to extract colors from search terms. Developed as a hackathon project at BigRed//Hacks.",
       tags: ["HTML/CSS", "Python", "Flask", "Google Cloud"],
       live: "https://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
@@ -111,14 +122,6 @@ export default ({ data }) => {
       live: "https://halfbothalfbrain.netlify.com/",
       github: "https://github.com/ageor0114/nyit-hackathon",
       image: "https://i.imgur.com/YAwqSVj.png",
-    },
-    {
-      name: "Henlo3",
-      desc: "whatup",
-      tags: ["React", "Gatsby"],
-      live: "https://google.com",
-      github: "https://google.com",
-      image: "https://im7.ezgif.com/tmp/ezgif-7-0ccfeec93820.gif",
     },
   ]
   return (
