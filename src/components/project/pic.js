@@ -9,9 +9,10 @@ const ext = {
 const Pic = styled.a(({background})=>`
   width: 50%;
   border-radius: 0 5px 5px 0;
-  background: url(${background}) center center / cover no-repeat rgb(0, 0, 0);
+  background: url(${background}) top / cover no-repeat rgb(0, 0, 0);
 `,)
 
-export default ({ image, url }) => {
+export default ({ image, live, github }) => {
+  const url = live ? live : github
   return <Pic background={image} href={url} {...ext}/>
 }

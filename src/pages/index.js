@@ -36,9 +36,7 @@ const GlobalStyle = createGlobalStyle`
 const Intro = ({ name, desc, iconData }) => (
   <Section>
     <BigName name={name} desc={desc} />
-    <IconGroup data={iconData}>
-      
-    </IconGroup>
+    <IconGroup data={iconData}></IconGroup>
   </Section>
 )
 
@@ -99,23 +97,20 @@ export default ({ data }) => {
   const allProjects = [
     {
       name: "Ask Palette",
-      desc: 'Ever wonder what "Power" looks like? What about ',
-      tags: ["React", "Gatsby"],
-      live: "http://askpalette.appspot.com/",
+      desc: "Generate color palettes from your search terms! Uses Google Cloud Vision to extract colors from search terms. Developed as a hackathon project at BigRed//Hacks.",
+      tags: ["HTML/CSS", "Python", "Flask", "Google Cloud"],
+      live: "https://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
-      image:
-        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
-      url: "https://google.com",
+      image: "https://i.imgur.com/ZZEJQvS.gif",
     },
     {
-      name: "Henlo2",
-      desc: "whatup",
-      tags: ["React", "Gatsby"],
-      live: "https://google.com",
-      github: "https://google.com",
-      image:
-        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
-      url: "https://google.com",
+      name: "Half Bot Half Brain",
+      desc:
+        "It's like Mad Libs, but better. The backend generates grammatically correct text from input with the help of spaCy. Developed as a hackathon project at TeenhacksLI.",
+      tags: ["HTML/CSS", "JavaScript", "Python", "spaCy"],
+      live: "https://halfbothalfbrain.netlify.com/",
+      github: "https://github.com/ageor0114/nyit-hackathon",
+      image: "https://i.imgur.com/YAwqSVj.png",
     },
     {
       name: "Henlo3",
@@ -123,9 +118,7 @@ export default ({ data }) => {
       tags: ["React", "Gatsby"],
       live: "https://google.com",
       github: "https://google.com",
-      image:
-        "https://maximpekarsky.com/assets/images/project_images/hackterms.gif",
-      url: "https://google.com",
+      image: "https://im7.ezgif.com/tmp/ezgif-7-0ccfeec93820.gif",
     },
   ]
   return (
@@ -136,6 +129,7 @@ export default ({ data }) => {
       </Helmet>
       <GlobalStyle />
       <Intro {...introData} />
+      <Projects projData={allProjects} />
     </>
   )
 }

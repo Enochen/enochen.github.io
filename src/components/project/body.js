@@ -33,9 +33,8 @@ const Tag = styled.div`
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
-  background: #d0cccc;
+  background: #e6e6e6;
   border-radius: 5px;
-  color: #404040;
   transition: color 1s, background 1s;
 `
 
@@ -49,12 +48,18 @@ const LinkWrapper = styled(Subsection)`
 `
 
 const Link = styled.a`
-  color: #2b9cce;
+  color: #6460b8;
   text-decoration: none;
   padding: 5px 12px;
-  border: 1px solid #2b9cce;
+  border: 1px solid #6460b8;
   border-radius: 5px;
   margin-right: 0.5rem;
+
+  &:hover {
+    
+    color: white;
+    background: #6460b8;
+  }
 `
 
 export default ({ name, desc, tags, github, live }) => {

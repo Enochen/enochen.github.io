@@ -40,7 +40,7 @@ const theme = {
         textDecoration: "none",
       },
       "a:hover": {
-        color: "#8c89cc",
+        color: "#6460b8",
       },
       blockquote: {
         ...scale(1 / 5),
