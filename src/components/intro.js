@@ -11,12 +11,26 @@ const HeaderWrapper = styled.div`
 
 const Name = styled.h1`
   font-weight: normal;
-  font-size: 5rem;
+  font-size: ${props => (props.aboutOn ? "3.5rem" : "5rem")};
+  transition: font-size 0.5s;
 `
 
 const Description = styled.h2`
   font-weight: 400;
-  font-size: 2rem;
+  font-size: ${props => (props.aboutOn ? "1.5rem" : "2rem")};
+  transition: font-size 0.5s;
+`
+
+const About = styled.div`
+  visibility: ${props => (props.aboutOn ? "visible" : "hidden")};
+  line-height: 1.4;
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5vh;
+  height: ${props => (props.aboutOn ? "auto" : "0")};
+  font-size: ${props => (props.aboutOn ? "1.1rem" : "0.5rem")};
+  transition: font-size 0.5s, height 0.5s, opacity 0.5s;
 `
 
 const GroupWrapper = styled.div`
@@ -42,7 +56,7 @@ const Link = styled.a`
 
 const Label = styled.div``
 
-const Icon = ({ icon, link, label, external = false }) => {
+const Icon = ({ icon, link, label, external = false, toggle }) => {
   const IconType = icon
   const iconSize = 42
   const ext = external
@@ -51,9 +65,14 @@ const Icon = ({ icon, link, label, external = false }) => {
         rel: "noopener noreferrer",
       }
     : {}
+  const onClick = link
+    ? {}
+    : {
+        onClick: toggle,
+      }
   const OptionalLink = link ? Link : React.Fragment
   return (
-    <IconWrapper>
+    <IconWrapper {...onClick}>
       <OptionalLink href={link} {...ext}>
         <IconType size={iconSize} />
         <Label>{label}</Label>
@@ -63,13 +82,20 @@ const Icon = ({ icon, link, label, external = false }) => {
 }
 
 export default ({ name, desc, iconData }) => {
-
-  const icons = iconData ? iconData.map(x => <Icon {...x}></Icon>) : []
+  const [aboutOn, setAboutOn] = useState(false)
+  const toggleAboutOn = () => setAboutOn(!aboutOn)
+  const icons = iconData
+    ? iconData.map(x => <Icon toggle={toggleAboutOn} {...x}></Icon>)
+    : []
   return (
     <Section>
       <HeaderWrapper>
-        <Name>{name}</Name>
-        <Description>{desc}</Description>
+        <Name aboutOn={aboutOn}>{name}</Name>
+        <Description aboutOn={aboutOn}>{desc}</Description>
+        <About aboutOn={aboutOn}>
+          <p>hi</p>
+          <p>hi</p>
+        </About>
       </HeaderWrapper>
       <GroupWrapper>{icons}</GroupWrapper>
     </Section>
