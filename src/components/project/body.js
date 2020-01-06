@@ -56,7 +56,6 @@ const Link = styled.a`
   margin-right: 0.5rem;
 
   &:hover {
-    
     color: white;
     background: #6460b8;
   }

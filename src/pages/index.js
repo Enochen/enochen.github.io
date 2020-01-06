@@ -1,9 +1,6 @@
 import React from "react"
-import BigName from "../components/intro/header"
-import Section from "../components/section"
-import IconGroup from "../components/intro/icons"
-import Title from "../components/title"
-import Project from "../components/project/project"
+import Intro from "../components/intro"
+import Projects from "../components/projects"
 import {
   FaGithub,
   FaNewspaper,
@@ -33,23 +30,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Intro = ({ name, desc, iconData }) => (
-  <Section>
-    <BigName name={name} desc={desc} />
-    <IconGroup data={iconData}></IconGroup>
-  </Section>
-)
-
-const Projects = ({ projData }) => {
-  const projects = projData.map(project => <Project {...project} />)
-  return (
-    <Section id="projects" wide={true}>
-      <Title text="Projects"></Title>
-      {projects}
-    </Section>
-  )
-}
-
 export default ({ data }) => {
   const introData = {
     name: "Enoch Chen",
@@ -58,7 +38,6 @@ export default ({ data }) => {
       {
         label: "About",
         icon: FaUser,
-        link: "#about",
         external: false,
       },
       {

@@ -1,6 +1,5 @@
 import React from "react"
-import BigName from "../components/intro/header"
-import Section from "../components/section"
+import Intro from "../components/intro"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
@@ -29,8 +28,6 @@ export default ({ data }) => (
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
     <GlobalStyle />
-    <Section>
-      <BigName name="404" desc="whoops" />
-    </Section>
+    <Intro name="404" desc="whoops" />
   </>
 )
