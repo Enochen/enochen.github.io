@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `
 
 const Subsection = styled.div`
-  margin: 0.25rem 0px;
+  margin: 0.5rem 0px;
 `
 
 const Name = styled(Subsection)`
@@ -76,7 +76,7 @@ export default ({ name, desc, tags, github, live }) => {
     <Wrapper>
       <Name>{name}</Name>
       <TagWrapper>{tagData}</TagWrapper>
-      <Description>{desc}</Description>
+      <Description dangerouslySetInnerHTML={{ __html: desc }}></Description>
       <LinkWrapper>{links}</LinkWrapper>
     </Wrapper>
   )

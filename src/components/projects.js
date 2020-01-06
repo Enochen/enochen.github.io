@@ -6,7 +6,7 @@ import Title from "./title"
 export default ({ projData }) => {
   const projects = projData.map(project => <Project {...project} />)
   return (
-    <Section id="projects" wide={true}>
+    <Section id="projects">
       <Title text="Projects"></Title>
       {projects}
     </Section>

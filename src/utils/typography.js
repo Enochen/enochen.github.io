@@ -36,7 +36,7 @@ const theme = {
         margin: 0,
       },
       a: {
-        color: "#419eda",
+        color: "#d76563",
         textDecoration: "none",
       },
       "a:hover": {

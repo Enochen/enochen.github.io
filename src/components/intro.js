@@ -2,35 +2,58 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Section from "./section"
 
+const ext = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+}
+
 const HeaderWrapper = styled.div`
   text-align: center;
-  padding-top: 25vh;
   display: flex;
   flex-direction: column;
+  padding-top: 25vh;
+  transition: padding-top 0.5s;
+
+  ${props =>
+    props.aboutOn &&
+    `
+      padding-top:15%;
+      ${Name} {
+        font-size: 3.5rem;
+      }
+      ${Desc} {
+        font-size: 1.5rem;
+      }
+      ${About} {
+        visibility: visible;
+        height: auto;
+        font-size: 1.1rem;
+      }
+    `}
 `
 
 const Name = styled.h1`
   font-weight: normal;
-  font-size: ${props => (props.aboutOn ? "3.5rem" : "5rem")};
+  font-size: 5rem;
   transition: font-size 0.5s;
 `
 
-const Description = styled.h2`
+const Desc = styled.h2`
   font-weight: 400;
-  font-size: ${props => (props.aboutOn ? "1.5rem" : "2rem")};
+  font-size: 2rem;
   transition: font-size 0.5s;
 `
 
 const About = styled.div`
-  visibility: ${props => (props.aboutOn ? "visible" : "hidden")};
+  visibility: hidden;
   line-height: 1.4;
   text-align: justify;
   width: 80%;
   margin: 0 auto;
-  padding-top: 5vh;
-  height: ${props => (props.aboutOn ? "auto" : "0")};
-  font-size: ${props => (props.aboutOn ? "1.1rem" : "0.5rem")};
-  transition: font-size 0.5s, height 0.5s, opacity 0.5s;
+  padding-top: 10vh;
+  height: 0;
+  font-size: 0.5rem;
+  transition: font-size 0.2s, height 0.5s;
 `
 
 const GroupWrapper = styled.div`
@@ -38,8 +61,8 @@ const GroupWrapper = styled.div`
   justify-content: space-between;
   text-align: center;
   margin-top: auto;
-  padding-top: 0%;
-  padding-bottom: 12vh;
+  padding-top: 0;
+  padding-bottom: 10vh;
 `
 
 const IconWrapper = styled.div`
@@ -54,26 +77,30 @@ const Link = styled.a`
   color: hsla(0, 0%, 0%, 0.7);
 `
 
-const Label = styled.div``
+const Label = styled.div`
+  user-select: none;
+`
 
 const Icon = ({ icon, link, label, external = false, toggle }) => {
   const IconType = icon
   const iconSize = 42
-  const ext = external
+  const OptionalLink = link ? Link : React.Fragment
+
+  const linkProps = external
     ? {
         target: "_blank",
         rel: "noopener noreferrer",
       }
     : {}
-  const onClick = link
+  const wrapperProps = link
     ? {}
     : {
         onClick: toggle,
       }
-  const OptionalLink = link ? Link : React.Fragment
+
   return (
-    <IconWrapper {...onClick}>
-      <OptionalLink href={link} {...ext}>
+    <IconWrapper {...wrapperProps}>
+      <OptionalLink href={link} {...linkProps}>
         <IconType size={iconSize} />
         <Label>{label}</Label>
       </OptionalLink>
@@ -81,21 +108,31 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
   )
 }
 
-export default ({ name, desc, iconData }) => {
+export default ({ name, desc, aboutData, iconData }) => {
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => setAboutOn(!aboutOn)
   const icons = iconData
-    ? iconData.map(x => <Icon toggle={toggleAboutOn} {...x}></Icon>)
+    ? iconData.map(x =>
+        x.link ? (
+          <Icon {...x}></Icon>
+        ) : (
+          <Icon
+            {...x}
+            toggle={toggleAboutOn}
+            icon={aboutOn ? x.icon : x.icon2}
+          ></Icon>
+        )
+      )
     : []
+  const about = aboutData.map(x => (
+    <p dangerouslySetInnerHTML={{ __html: x }} />
+  ))
   return (
-    <Section>
-      <HeaderWrapper>
-        <Name aboutOn={aboutOn}>{name}</Name>
-        <Description aboutOn={aboutOn}>{desc}</Description>
-        <About aboutOn={aboutOn}>
-          <p>hi</p>
-          <p>hi</p>
-        </About>
+    <Section intro={true}>
+      <HeaderWrapper aboutOn={aboutOn}>
+        <Name>{name}</Name>
+        <Desc>{desc}</Desc>
+        <About>{about}</About>
       </HeaderWrapper>
       <GroupWrapper>{icons}</GroupWrapper>
     </Section>

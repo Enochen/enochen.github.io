@@ -8,6 +8,7 @@ import {
   FaUser,
   FaFlask,
   FaGraduationCap,
+  FaRegUser,
 } from "react-icons/fa"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
@@ -34,17 +35,22 @@ export default ({ data }) => {
   const introData = {
     name: "Enoch Chen",
     desc: "cs @ cornell",
+    aboutData: [
+      "I am currently an undergrad at Cornell University studying Computer Science. I am passionate about designing effective and reliable systems. My goal is to make things that others can enjoy well.",
+      "In my free time, I like tinkering with keyboards.",
+      "Check out some of my work <a href = '#projects'>here</a>.",
+    ],
     iconData: [
       {
         label: "About",
         icon: FaUser,
-        external: false,
+        icon2: FaRegUser,
+        special: true,
       },
       {
         label: "Projects",
         icon: FaFlask,
         link: "#projects",
-        external: false,
       },
       {
         label: "Github",
@@ -77,7 +83,7 @@ export default ({ data }) => {
     {
       name: "cue",
       desc:
-        "I joined Cornell Design & Tech Initiative in Fall 2019 as a Full Stack Developer. My subteam is responsible for cue, an events app for Cornell students. I worked on a set of scripts that populated our event database with external data.",
+        "I joined <a href='https://cornelldti.org' target='_blank' rel='noopener'>Cornell Design & Tech Initiative</a> in Fall 2019 as a Full Stack Developer. My team is responsible for cue, an event-discovery app for Cornell students at Ithaca. I developed a set of scripts to facilitate populating our event database with external data.",
       tags: ["HTML/CSS", "Javascript", "Python", "ReactJS", "Django"],
       live: "https://www.cornelldti.org/Projects/events",
       github: "https://github.com/cornell-dti/events-backend/",
@@ -87,7 +93,7 @@ export default ({ data }) => {
     {
       name: "Ask Palette",
       desc:
-        "Generate color palettes from your search terms! Uses Google Cloud Vision to extract colors from search terms. Developed as a hackathon project at BigRed//Hacks.",
+        "Generate color palettes from your search terms! Uses Google Cloud Vision to extract colors from search terms. Developed as a hackathon project at <a href='https://bigredhacks.com' target='_blank' rel='noopener'>BigRed//Hacks</a>.",
       tags: ["HTML/CSS", "Python", "Flask", "Google Cloud"],
       live: "https://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
