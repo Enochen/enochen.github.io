@@ -73,7 +73,7 @@ export default ({ data }) => {
       {
         label: "Resume",
         icon: FaNewspaper,
-        link: "/Enoch Chen cv.pdf",
+        link: "/Enoch Chen resume.pdf",
         external: true,
       },
     ],
