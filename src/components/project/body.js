@@ -61,7 +61,7 @@ const Link = styled.a`
   }
 `
 
-export default ({ name, desc, tags, github, live }) => {
+export default ({ name, desc, tags = [], github, live }) => {
   const tagData = tags.map(x => <Tag key={x}>{x}</Tag>)
   const linkData = [
     ...(live ? [{ label: "Project", url: live }] : []),

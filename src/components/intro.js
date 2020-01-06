@@ -2,11 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Section from "./section"
 
-const ext = {
-  target: "_blank",
-  rel: "noopener noreferrer",
-}
-
 const HeaderWrapper = styled.div`
   text-align: center;
   display: flex;
@@ -108,22 +103,20 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
   )
 }
 
-export default ({ name, desc, aboutData, iconData }) => {
+export default ({ name, desc, aboutData = [], iconData = [] }) => {
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => setAboutOn(!aboutOn)
-  const icons = iconData
-    ? iconData.map(x =>
-        x.link ? (
-          <Icon {...x}></Icon>
-        ) : (
-          <Icon
-            {...x}
-            toggle={toggleAboutOn}
-            icon={aboutOn ? x.icon : x.icon2}
-          ></Icon>
-        )
-      )
-    : []
+  const icons = iconData.map(x =>
+    x.link ? (
+      <Icon {...x}></Icon>
+    ) : (
+      <Icon
+        {...x}
+        toggle={toggleAboutOn}
+        icon={aboutOn ? x.icon : x.icon2}
+      ></Icon>
+    )
+  )
   const about = aboutData.map(x => (
     <p dangerouslySetInnerHTML={{ __html: x }} />
   ))
