@@ -67,13 +67,13 @@ export default () => {
       {
         label: "Transcript",
         icon: FaGraduationCap,
-        link: "/2020-01-04-Transcript.pdf",
+        link: "/misc/2020-01-04-Transcript.pdf",
         external: true,
       },
       {
         label: "Resume",
         icon: FaNewspaper,
-        link: "/Enoch Chen resume.pdf",
+        link: "/misc/Enoch Chen resume.pdf",
         external: true,
       },
     ],
@@ -88,7 +88,7 @@ export default () => {
       live: "https://www.cornelldti.org/Projects/events",
       github: "https://github.com/cornell-dti/events-backend/",
       image:
-        "https://www.cornelldti.org/public/pages/projects/pages/events/feature1.jpg",
+        "/projects/cue.jpg",
     },
     {
       name: "Ask Palette",
@@ -97,7 +97,7 @@ export default () => {
       tags: ["HTML/CSS", "Python", "Flask", "Google Cloud"],
       live: "https://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
-      image: "https://i.imgur.com/ZZEJQvS.gif",
+      image: "/projects/askpalette.gif",
     },
     {
       name: "Half Bot Half Brain",
@@ -106,7 +106,7 @@ export default () => {
       tags: ["HTML/CSS", "JavaScript", "Python", "spaCy"],
       live: "https://halfbothalfbrain.netlify.com/",
       github: "https://github.com/ageor0114/nyit-hackathon",
-      image: "https://i.imgur.com/YAwqSVj.png",
+      image: "/projects/hbhb.png",
     },
   ]
   return (
