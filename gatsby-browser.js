@@ -1,6 +1,10 @@
-const scrollTo = (id) => () => {
+export const onInitialClientRender = () => {
+  require("typeface-source-sans-pro")
+}
+
+const scrollTo = id => () => {
   const el = document.querySelector(id)
-  if (el) return window.scrollTo(0, el.offsetTop - 20)
+  if (el) return window.scrollTo(0, el.offsetTop)
   return false
 }
 

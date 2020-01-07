@@ -3,7 +3,6 @@ import gray from "gray-percentage"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import verticalRhythm from "compass-vertical-rhythm"
 
-require("typeface-source-sans-pro")
 
 const theme = {
   title: "Dasher",
