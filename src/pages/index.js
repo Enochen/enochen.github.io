@@ -88,7 +88,7 @@ export default () => {
       live: "https://www.cornelldti.org/Projects/events",
       github: "https://github.com/cornell-dti/events-backend/",
       image:
-        "/projects/cue.jpg",
+        "cue.jpg",
     },
     {
       name: "Ask Palette",
@@ -97,7 +97,7 @@ export default () => {
       tags: ["HTML/CSS", "Python", "Flask", "Google Cloud"],
       live: "https://askpalette.appspot.com/",
       github: "https://github.com/Enochen/askpalette",
-      image: "/projects/askpalette.gif",
+      image: "askpalette.png",
     },
     {
       name: "Half Bot Half Brain",
@@ -106,7 +106,7 @@ export default () => {
       tags: ["HTML/CSS", "JavaScript", "Python", "spaCy"],
       live: "https://halfbothalfbrain.netlify.com/",
       github: "https://github.com/ageor0114/nyit-hackathon",
-      image: "/projects/hbhb.png",
+      image: "hbhb.png",
     },
   ]
   return (

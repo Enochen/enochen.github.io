@@ -10,11 +10,12 @@ const Wrapper = styled.div`
   margin: 1rem;
   background: white;
   box-shadow: 0 5px 10px #a2a2a2;
+  flex-direction: row-reverse
 `
 
-export default (data) => (
+export default data => (
   <Wrapper>
-    <Body {...data} ></Body>
     <Pic {...data} />
+    <Body {...data}></Body>
   </Wrapper>
 )
