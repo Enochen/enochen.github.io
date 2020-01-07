@@ -8,13 +8,6 @@ const theme = {
   title: "Dasher",
   baseFontSize: "18px",
   baseLineHeight: 1.56,
-  fontDisplay: "swap",
-  googleFonts: [
-    {
-      name: "Source Sans Pro",
-      styles: ["200", "400", "400i", "700&display=swap"],
-    },
-  ],
   scaleRatio: 2.5,
   headerFontFamily: ["Source Sans Pro", "Helvetica", "Arial", "sans-serif"],
   bodyFontFamily: ["Source Sans Pro", "Helvetica", "Arial", "sans-serif"],
