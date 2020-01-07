@@ -25,11 +25,6 @@ export const query = graphql`
   }
 `
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    background-color: #f3f3f3;
-  }
-`
 
 export default () => {
   const introData = {
@@ -87,8 +82,7 @@ export default () => {
       tags: ["HTML/CSS", "Javascript", "Python", "ReactJS", "Django"],
       live: "https://www.cornelldti.org/Projects/events",
       github: "https://github.com/cornell-dti/events-backend/",
-      image:
-        "cue.jpg",
+      image: "cue.jpg",
     },
     {
       name: "Ask Palette",
@@ -112,7 +106,6 @@ export default () => {
   return (
     <>
       <SEO />
-      <GlobalStyle />
       <Intro {...introData} />
       <Projects projData={allProjects} />
     </>

@@ -15,16 +15,9 @@ export const query = graphql`
   }
 `
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    background-color: #f3f3f3;
-  }
-`
-
 export default ({ data }) => (
   <>
     <SEO title="Portfolio" />
-    <GlobalStyle />
     <Intro name="404" desc="whoops" />
   </>
 )

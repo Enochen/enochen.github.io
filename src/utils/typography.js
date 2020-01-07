@@ -3,6 +3,8 @@ import gray from "gray-percentage"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import verticalRhythm from "compass-vertical-rhythm"
 
+require("typeface-source-sans-pro")
+
 const theme = {
   title: "Dasher",
   baseFontSize: "18px",
@@ -41,6 +43,9 @@ const theme = {
       },
       "a:hover": {
         color: "#6460b8",
+      },
+      html: {
+        backgroundColor: "#f3f3f3",
       },
       blockquote: {
         ...scale(1 / 5),
