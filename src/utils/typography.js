@@ -4,10 +4,10 @@ import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import verticalRhythm from "compass-vertical-rhythm"
 
 const theme = {
-  title: "Lilac",
+  title: "Dasher",
   baseFontSize: "18px",
   baseLineHeight: 1.56,
-  fontDisplay: 'swap',
+  fontDisplay: "swap",
   googleFonts: [
     {
       name: "Source Sans Pro",
@@ -15,8 +15,8 @@ const theme = {
     },
   ],
   scaleRatio: 2.5,
-  headerFontFamily: ["Source Sans Pro", "sans-serif"],
-  bodyFontFamily: ["Source Sans Pro", "sans-serif"],
+  headerFontFamily: ["Source Sans Pro", "Helvetica", "Arial", "sans-serif"],
+  bodyFontFamily: ["Source Sans Pro", "Helvetica", "Arial", "sans-serif"],
   headerColor: "hsla(0,0%,0%,0.85)",
   bodyColor: "hsla(0,0%,0%,0.7)",
   headerWeight: 400,

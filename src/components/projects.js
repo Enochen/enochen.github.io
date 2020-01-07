@@ -4,7 +4,7 @@ import Project from "./project/project"
 import Title from "./title"
 
 export default ({ projData = [] }) => {
-  const projects = projData.map(project => <Project {...project} />)
+  const projects = projData.map((x, i) => <Project key={i} {...x} />)
   return (
     <Section id="projects">
       <Title text="Projects"></Title>

@@ -81,6 +81,11 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
   const iconSize = 42
   const OptionalLink = link ? Link : React.Fragment
 
+  const linkHref = link
+    ? {
+        href: link,
+      }
+    : {}
   const linkProps = external
     ? {
         target: "_blank",
@@ -95,7 +100,7 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
 
   return (
     <IconWrapper {...wrapperProps}>
-      <OptionalLink href={link} {...linkProps}>
+      <OptionalLink {...linkHref} {...linkProps}>
         <IconType size={iconSize} />
         <Label>{label}</Label>
       </OptionalLink>
@@ -106,19 +111,20 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
 export default ({ name, desc, aboutData = [], iconData = [] }) => {
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => setAboutOn(!aboutOn)
-  const icons = iconData.map(x =>
+  const icons = iconData.map((x, i) =>
     x.link ? (
-      <Icon {...x}></Icon>
+      <Icon key={i} {...x}></Icon>
     ) : (
       <Icon
+        key={i}
         {...x}
         toggle={toggleAboutOn}
         icon={aboutOn ? x.icon : x.icon2}
       ></Icon>
     )
   )
-  const about = aboutData.map(x => (
-    <p dangerouslySetInnerHTML={{ __html: x }} />
+  const about = aboutData.map((x, i) => (
+    <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
   ))
   return (
     <Section intro={true}>
