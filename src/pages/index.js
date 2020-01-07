@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export default ({ data }) => {
+export default () => {
   const introData = {
     name: "Enoch Chen",
     desc: "cs @ cornell",
@@ -102,7 +102,7 @@ export default ({ data }) => {
     {
       name: "Half Bot Half Brain",
       desc:
-        "It's like Mad Libs, but better. The backend generates grammatically correct text from input with the help of spaCy. Developed as a hackathon project at TeenhacksLI.",
+        "It's like Mad Libs, but better. The backend generates grammatically correct text from input with the help of spaCy. Developed as a hackathon project at <a href='https://teenhacksli.com/' target='_blank' rel='noopener'>TeenhacksLI</a>.",
       tags: ["HTML/CSS", "JavaScript", "Python", "spaCy"],
       live: "https://halfbothalfbrain.netlify.com/",
       github: "https://github.com/ageor0114/nyit-hackathon",
