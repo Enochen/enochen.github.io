@@ -11,7 +11,6 @@ import {
   FaGraduationCap,
   FaRegUser,
 } from "react-icons/fa"
-import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
 
 export const query = graphql`

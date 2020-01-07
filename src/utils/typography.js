@@ -13,7 +13,12 @@ const theme = {
   googleFonts: [
     {
       name: "Source Sans Pro",
-      styles: ["200", "400", "400i", "700"],
+      styles: [
+        "200&display=swap",
+        "400&display=swap",
+        "400i&display=swap",
+        "700&display=swap",
+      ],
     },
   ],
   scaleRatio: 2.5,
