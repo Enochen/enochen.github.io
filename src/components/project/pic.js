@@ -12,7 +12,7 @@ const Pic = styled.a(({background})=>`
   background: url(${background}) top / cover no-repeat rgb(0, 0, 0);
 `,)
 
-export default ({ image, live, github }) => {
+export default ({ name, image, live, github }) => {
   const url = live ? live : github
-  return <Pic background={image} href={url} {...ext}/>
+  return <Pic background={image} href={url} alt={name} {...ext}/>
 }

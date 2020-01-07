@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo"
 import Intro from "../components/intro"
 import Projects from "../components/projects"
 import {
@@ -12,7 +13,6 @@ import {
 } from "react-icons/fa"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 export const query = graphql`
   query {
@@ -38,7 +38,7 @@ export default ({ data }) => {
     aboutData: [
       "I am currently an undergrad at Cornell University studying Computer Science. I am passionate about designing effective and reliable systems. My goal is to make things that others can enjoy well.",
       "In my free time, I like tinkering with keyboards.",
-      "Check out some of my work <a href = '#projects'>here</a>.",
+      "Check out some of my stuff <a href = '#projects'>here</a>.",
     ],
     iconData: [
       {
@@ -111,10 +111,7 @@ export default ({ data }) => {
   ]
   return (
     <>
-      <Helmet defer={false}>
-        <title>{data.site.siteMetadata.title}</title>
-        <meta name="description" content={data.site.siteMetadata.description} />
-      </Helmet>
+      <SEO />
       <GlobalStyle />
       <Intro {...introData} />
       <Projects projData={allProjects} />

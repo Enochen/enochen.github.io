@@ -1,8 +1,8 @@
 import React from "react"
+import SEO from "../components/seo"
 import Intro from "../components/intro"
 import { createGlobalStyle } from "styled-components"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 export const query = graphql`
   query {
@@ -23,10 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
 export default ({ data }) => (
   <>
-    <Helmet defer={false}>
-      <title>{data.site.siteMetadata.title} - 404</title>
-      <meta name="description" content={data.site.siteMetadata.description} />
-    </Helmet>
+    <SEO title="Portfolio" />
     <GlobalStyle />
     <Intro name="404" desc="whoops" />
   </>

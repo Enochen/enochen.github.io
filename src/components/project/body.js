@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
-  padding: 1.3rem;
+  padding: 0.5rem 1.3rem;
 `
 
 const Subsection = styled.div`
