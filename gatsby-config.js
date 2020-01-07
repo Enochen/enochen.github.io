@@ -9,7 +9,7 @@ module.exports = {
     title: `Enoch Chen`,
     description: `Hey! I'm Enoch - I do some cool things.`,
     siteUrl: `https://enochen.me`,
-    author: `Enoch Chen`
+    author: `Enoch Chen`,
   },
   plugins: [
     {
@@ -27,11 +27,13 @@ module.exports = {
         background_color: `#f3f3f3`,
         theme_color: `#6460b8`,
         display: `standalone`,
-        icon: `static/favicon.png`
+        icon: `static/favicon.png`,
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
   ],
 }
