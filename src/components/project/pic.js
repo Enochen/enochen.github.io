@@ -44,7 +44,7 @@ export default ({ name, image, live, github }) => {
   ).node.childImageSharp.fluid
   const url = live ? live : github
   return (
-    <Link href={url} alt={name} {...ext}>
+    <Link href={url} aria-label={name} {...ext}>
       <Pic fluid={imageData}></Pic>
     </Link>
   )
