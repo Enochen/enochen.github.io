@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import SEO from "../components/seo"
 import Intro from "../components/intro"
 import Projects from "../components/projects"
@@ -12,6 +12,7 @@ import {
   FaRegUser,
 } from "react-icons/fa"
 import { graphql } from "gatsby"
+import { removeHash } from "react-scrollable-anchor"
 
 export const query = graphql`
   query {
@@ -24,8 +25,16 @@ export const query = graphql`
   }
 `
 
+const handleScroll = () => {
+  typeof window !== `undefined` &&
+    window.scrollY <= window.innerHeight * 0.25 &&
+    removeHash()
+}
 
 export default () => {
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll)
+  })
   const introData = {
     name: "Enoch Chen",
     desc: "cs @ cornell",

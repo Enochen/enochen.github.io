@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import Section, { Wrapper } from "./section"
 import { IconContext } from "react-icons"
 import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
 import { goToTop, removeHash } from "react-scrollable-anchor"
-
-const handleScroll = () => {
-  typeof window !== `undefined` &&
-    window.scrollY <= window.innerHeight * 0.2 &&
-    removeHash()
-}
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -169,9 +163,6 @@ const IntroSection = styled(Section)`
 `
 
 export default ({ name, desc, aboutData = [], iconData = [] }) => {
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll)
-  })
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => {
     setAboutOn(!aboutOn)
