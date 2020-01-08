@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import ScrollableAnchor from 'react-scrollable-anchor'
 
 const Section = styled.div`
   justify-content: center;
