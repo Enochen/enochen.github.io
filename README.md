@@ -1,5 +1,5 @@
-# enochen.me
+# portfolio
 
-## (wip)
+Enoch's [website](https://enochen.me).
 
-Uses GatsbyJS to generate a blazing fast personal site.
+Uses GatsbyJS, which is blazing fast.
