@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import Section, { Wrapper } from "./section"
 import { IconContext } from "react-icons"
-import { scale, TABLET_MEDIA_QUERY } from "../utils/typography"
+import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -29,10 +29,10 @@ const About = styled.div`
   text-align: justify;
   width: 80%;
   margin: 0 auto;
-  padding-top: 5vh;
+  padding-top: ${rhythm(1.7)};
   height: 0;
-  ${scale(0.2)};
-  transition: font-size 0.2s, height 0.5s;
+  ${scale(-2)};
+  transition: font-size 0.4s, height 0.5s;
 `
 
 const GroupWrapper = styled.div`
@@ -127,8 +127,12 @@ const IntroSection = styled(Section)`
     ${Desc} {
       ${scale(0.6)};
     }
+    ${About} {
+      padding-top: ${rhythm(1)};
+    }
     ${GroupWrapper} {
       flex-wrap: wrap;
+      padding-bottom: 13vh;
     }
     ${IconWrapper} {
       display: flex;
@@ -151,7 +155,7 @@ const IntroSection = styled(Section)`
           font-size: 1.2rem;
         }
         ${About} {
-          font-size: 1.2rem;
+          ${scale(0.2)};
         }
       `}
   }
