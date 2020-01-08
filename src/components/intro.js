@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled, { css } from "styled-components"
 import Section, { Wrapper } from "./section"
 import { IconContext } from "react-icons"
 import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
+import { goToTop, removeHash } from "react-scrollable-anchor"
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -60,7 +61,7 @@ const Label = styled.div`
   user-select: none;
 `
 
-const Icon = ({ icon, link, label, external = false, toggle }) => {
+const Icon = ({ icon, link, label, external = false, action }) => {
   const IconType = icon
   const OptionalLink = link ? Link : React.Fragment
 
@@ -78,7 +79,7 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
   const wrapperProps = link
     ? {}
     : {
-        onClick: toggle,
+        onClick: action,
       }
 
   return (
@@ -162,8 +163,15 @@ const IntroSection = styled(Section)`
 `
 
 export default ({ name, desc, aboutData = [], iconData = [] }) => {
+  useEffect(() => {
+    document.addEventListener("scroll", _ => window.scrollY === 0 && removeHash())
+  })
   const [aboutOn, setAboutOn] = useState(false)
-  const toggleAboutOn = () => setAboutOn(!aboutOn)
+  const toggleAboutOn = () => {
+    setAboutOn(!aboutOn)
+    goToTop()
+    removeHash()
+  }
   const about = aboutData.map((x, i) => (
     <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
   ))
@@ -176,7 +184,7 @@ export default ({ name, desc, aboutData = [], iconData = [] }) => {
           <Icon
             key={i}
             {...x}
-            toggle={toggleAboutOn}
+            action={toggleAboutOn}
             icon={aboutOn ? x.icon : x.icon2}
           ></Icon>
         )
