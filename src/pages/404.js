@@ -14,7 +14,7 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => (
+export default () => (
   <>
     <SEO title="Portfolio" />
     <Intro name="404" desc="whoops" />
