@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const DefaultSection = styled.div`
+const Section = styled.div`
   justify-content: center;
   display: flex;
   box-sizing: border-box;
@@ -9,11 +9,7 @@ const DefaultSection = styled.div`
   padding-bottom: 5vh;
 `
 
-const IntroSection = styled(DefaultSection)`
-  padding-bottom: 0;
-`
-
-const DefaultWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -21,15 +17,9 @@ const DefaultWrapper = styled.div`
   box-sizing: border-box;
 `
 
-const IntroWrapper = styled(DefaultWrapper)`
-  max-width: 800px;
-`
-
-export default ({ id, children, intro = false }) => {
-  const Wrapper = intro ? IntroWrapper : DefaultWrapper
-  const Section = intro ? IntroSection : DefaultSection
+export default ({ id, children, className }) => {
   return (
-    <Section id={id}>
+    <Section id={id} className={className}>
       <Wrapper>{children}</Wrapper>
     </Section>
   )

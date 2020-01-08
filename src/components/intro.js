@@ -1,6 +1,8 @@
 import React, { useState } from "react"
-import styled from "styled-components"
-import Section from "./section"
+import styled, { css } from "styled-components"
+import Section, { Wrapper } from "./section"
+import { IconContext } from "react-icons"
+import { scale } from "../utils/typography"
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -8,46 +10,28 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   padding-top: 25vh;
   transition: padding-top 0.5s;
-
-  ${props =>
-    props.aboutOn &&
-    `
-      padding-top:15%;
-      ${Name} {
-        font-size: 3.5rem;
-      }
-      ${Desc} {
-        font-size: 1.5rem;
-      }
-      ${About} {
-        visibility: visible;
-        height: auto;
-        font-size: 1.1rem;
-      }
-    `}
 `
 
 const Name = styled.h1`
   font-weight: normal;
-  font-size: 5rem;
+  ${scale(2.3)};
   transition: font-size 0.5s;
 `
 
 const Desc = styled.h2`
   font-weight: 400;
-  font-size: 2rem;
+  ${scale(1)};
   transition: font-size 0.5s;
 `
 
 const About = styled.div`
   visibility: hidden;
-  line-height: 1.4;
   text-align: justify;
   width: 80%;
   margin: 0 auto;
-  padding-top: 10vh;
+  padding-top: 5vh;
   height: 0;
-  font-size: 0.5rem;
+  ${scale(-1)};
   transition: font-size 0.2s, height 0.5s;
 `
 
@@ -78,7 +62,6 @@ const Label = styled.div`
 
 const Icon = ({ icon, link, label, external = false, toggle }) => {
   const IconType = icon
-  const iconSize = 42
   const OptionalLink = link ? Link : React.Fragment
 
   const linkHref = link
@@ -101,39 +84,103 @@ const Icon = ({ icon, link, label, external = false, toggle }) => {
   return (
     <IconWrapper {...wrapperProps}>
       <OptionalLink {...linkHref} {...linkProps}>
-        <IconType size={iconSize} />
+        <IconType />
         <Label>{label}</Label>
       </OptionalLink>
     </IconWrapper>
   )
 }
 
+const IntroSection = styled(Section)`
+  padding-bottom: 0;
+
+  ${Wrapper} {
+    max-width: 800px;
+  }
+
+  ${props =>
+    props.aboutOn &&
+    css`
+      ${HeaderWrapper} {
+        padding-top: 15vh;
+      }
+      ${Name} {
+        ${scale(1.4)};
+      }
+      ${Desc} {
+        ${scale(0.6)};
+      }
+      ${About} {
+        visibility: visible;
+        height: auto;
+        ${scale(0)};
+      }
+    `}
+
+  @media handheld, screen and (max-width: 768px) {
+    .icon {
+      display: none;
+    }
+    ${GroupWrapper} {
+      flex-wrap: wrap;
+    }
+    ${IconWrapper} {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      padding: 0.5rem 2rem;
+    }
+    ${Label} {
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+    }
+    ${props =>
+      props.aboutOn &&
+      css`
+        ${Name} {
+          font-size: 3rem;
+        }
+        ${Desc} {
+          font-size: 1.2rem;
+        }
+        ${About} {
+          font-size: 1.2rem;
+        }
+      `}
+  }
+`
+
 export default ({ name, desc, aboutData = [], iconData = [] }) => {
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => setAboutOn(!aboutOn)
-  const icons = iconData.map((x, i) =>
-    x.link ? (
-      <Icon key={i} {...x}></Icon>
-    ) : (
-      <Icon
-        key={i}
-        {...x}
-        toggle={toggleAboutOn}
-        icon={aboutOn ? x.icon : x.icon2}
-      ></Icon>
-    )
-  )
   const about = aboutData.map((x, i) => (
     <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
   ))
+  const icons = (
+    <IconContext.Provider value={{ size: "42", className: "icon" }}>
+      {iconData.map((x, i) =>
+        x.link ? (
+          <Icon key={i} {...x}></Icon>
+        ) : (
+          <Icon
+            key={i}
+            {...x}
+            toggle={toggleAboutOn}
+            icon={aboutOn ? x.icon : x.icon2}
+          ></Icon>
+        )
+      )}
+    </IconContext.Provider>
+  )
   return (
-    <Section intro={true}>
-      <HeaderWrapper aboutOn={aboutOn}>
+    <IntroSection aboutOn={aboutOn}>
+      <HeaderWrapper>
         <Name>{name}</Name>
         <Desc>{desc}</Desc>
         <About>{about}</About>
       </HeaderWrapper>
       <GroupWrapper>{icons}</GroupWrapper>
-    </Section>
+    </IntroSection>
   )
 }

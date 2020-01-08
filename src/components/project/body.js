@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { scale } from "../../utils/typography"
 
 const ext = {
   target: "_blank",
@@ -10,27 +11,28 @@ const Wrapper = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 1.3rem;
+  padding: 1.3rem;
 `
 
 const Subsection = styled.div`
-  margin: 0.5rem 0px;
+  margin: 0.5rem 0;
 `
 
 const Name = styled(Subsection)`
-  font-size: 2rem;
+  ${scale(1)};
   margin-bottom: 0.5rem;
 `
 
 const TagWrapper = styled(Subsection)`
   flex-wrap: wrap;
   display: flex;
+  margin-bottom: 0;
 `
 
 const Tag = styled.div`
+  ${scale(-0.3)};
   padding: 3px 10px;
   margin: 0 0.5rem 0.5rem 0;
-  font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
   background: #e6e6e6;
@@ -38,9 +40,7 @@ const Tag = styled.div`
   transition: color 1s, background 1s;
 `
 
-const Description = styled(Subsection)`
-  line-height: 1.4;
-`
+const Description = styled(Subsection)``
 
 const LinkWrapper = styled(Subsection)`
   flex-wrap: wrap;
