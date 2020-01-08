@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
-import { scale, TABLET_MEDIA_QUERY } from "../../utils/typography"
+import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
 
 const ext = {
   target: "_blank",
@@ -65,7 +65,6 @@ const Link = styled.a`
 
 const ImageLink = styled.a`
   width: 50%;
-  border-radius: 0 5px 5px 0;
   display: block;
   overflow: auto;
 `
@@ -128,12 +127,12 @@ const Image = ({ name, image, live, github }) => {
 
 const Wrapper = styled.div`
   display: flex;
-  border-radius: 5px;
   min-width: 300px;
   margin: 1rem;
   background: white;
-  box-shadow: 0 5px 10px #a2a2a2;
+  box-shadow: 0 ${rhythm(0.2)} ${rhythm(0.4)} #a2a2a2;
   flex-direction: row-reverse;
+  
   ${TABLET_MEDIA_QUERY} {
     flex-direction: column;
     ${BodyWrapper} {

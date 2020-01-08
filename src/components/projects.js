@@ -1,6 +1,6 @@
 import React from "react"
 import Section from "./section"
-import Project from "./project/project"
+import Project from "./project"
 import Title from "./title"
 
 export default ({ projData = [] }) => {

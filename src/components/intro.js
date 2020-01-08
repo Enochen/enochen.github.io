@@ -31,6 +31,7 @@ const About = styled.div`
   margin: 0 auto;
   padding-top: 5vh;
   height: 0;
+  ${scale(0.2)};
   transition: font-size 0.2s, height 0.5s;
 `
 
@@ -125,9 +126,6 @@ const IntroSection = styled(Section)`
     }
     ${Desc} {
       ${scale(0.6)};
-    }
-    ${About} {
-      ${scale(0.2)};
     }
     ${GroupWrapper} {
       flex-wrap: wrap;
