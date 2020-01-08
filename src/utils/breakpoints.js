@@ -1,0 +1,1 @@
+export const TABLET_MEDIA_QUERY = "@media only screen and (max-width:768px)"

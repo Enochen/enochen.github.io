@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import Section, { Wrapper } from "./section"
 import { IconContext } from "react-icons"
-import { scale } from "../utils/typography"
+import { scale, TABLET_MEDIA_QUERY } from "../utils/typography"
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -31,7 +31,6 @@ const About = styled.div`
   margin: 0 auto;
   padding-top: 5vh;
   height: 0;
-  ${scale(-1)};
   transition: font-size 0.2s, height 0.5s;
 `
 
@@ -105,7 +104,7 @@ const IntroSection = styled(Section)`
         padding-top: 15vh;
       }
       ${Name} {
-        ${scale(1.4)};
+        ${scale(1.8)};
       }
       ${Desc} {
         ${scale(0.6)};
@@ -113,13 +112,22 @@ const IntroSection = styled(Section)`
       ${About} {
         visibility: visible;
         height: auto;
-        ${scale(0)};
+        ${scale(0.2)};
       }
     `}
 
-  @media handheld, screen and (max-width: 768px) {
+  ${TABLET_MEDIA_QUERY} {
     .icon {
       display: none;
+    }
+    ${Name} {
+      ${scale(1.8)};
+    }
+    ${Desc} {
+      ${scale(0.6)};
+    }
+    ${About} {
+      ${scale(0.2)};
     }
     ${GroupWrapper} {
       flex-wrap: wrap;
