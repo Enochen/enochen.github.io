@@ -21,7 +21,6 @@ const intro = {
       icon: FaUser,
       icon2: FaRegUser,
       label: "About",
-      special: true,
     },
     {
       icon: FaFlask,

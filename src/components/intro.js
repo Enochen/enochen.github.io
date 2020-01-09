@@ -61,7 +61,7 @@ const Label = styled.div`
   user-select: none;
 `
 
-const Icon = ({ icon, link, label, external = false, action }) => {
+const Icon = ({ icon, label, link, external = false, action }) => {
   const IconType = icon
   const OptionalLink = link ? Link : React.Fragment
 
