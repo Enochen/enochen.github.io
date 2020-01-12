@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react'
-import { SEO } from '../components/seo'
+import { removeHash } from 'react-scrollable-anchor'
 import Intro from '../components/intro'
 import Projects from '../components/projects'
-import { removeHash } from 'react-scrollable-anchor'
+import { SEO } from '../components/seo'
 
-import introData from '../data/introData'
-import projectData from '../data/projectData'
+import { IntroData } from '../data/IntroData'
+import { ProjectData } from '../data/ProjectData'
 
 const handleScroll = () => {
-  window.scrollY <= window.innerHeight * 0.25 && removeHash()
+  if (window.scrollY <= window.innerHeight * 0.25) {
+    removeHash()
+  }
 }
 
 export default () => {
@@ -22,8 +24,8 @@ export default () => {
   return (
     <>
       <SEO />
-      <Intro {...introData} />
-      <Projects projData={projectData} />
+      <Intro {...IntroData} />
+      <Projects projData={ProjectData} />
     </>
   )
 }

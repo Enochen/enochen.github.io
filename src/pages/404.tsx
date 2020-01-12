@@ -1,7 +1,7 @@
-import React from 'react'
-import { SEO } from '../components/seo'
-import Intro from '../components/intro'
 import { graphql } from 'gatsby'
+import React from 'react'
+import Intro from '../components/intro'
+import { SEO } from '../components/seo'
 
 export const query = graphql`
   query {
