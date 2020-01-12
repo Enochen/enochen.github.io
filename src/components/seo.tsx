@@ -1,8 +1,24 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-function SEO({ title, description, lang, meta }) {
+import React, { FunctionComponent } from 'react'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
+
+type MetaTag =
+  | { name: string; content: any }
+  | { property: string; content: any }
+
+interface Props {
+  title?: string
+  description?: string
+  lang?: string
+  meta?: MetaTag[]
+}
+
+export const SEO: FunctionComponent<Props> = ({
+  title = ``,
+  description = ``,
+  lang = `en`,
+  meta = [],
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -64,15 +80,3 @@ function SEO({ title, description, lang, meta }) {
     />
   )
 }
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
-}
-export default SEO

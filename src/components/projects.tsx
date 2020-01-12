@@ -160,7 +160,7 @@ export default ({ projData = [] }) => {
     <Project key={i} imageData={projectImages.allFile.edges} {...x} />
   ))
   return (
-    <Section ids="projects">
+    <Section id="projects">
       <Title text="Projects"></Title>
       {projects}
     </Section>
