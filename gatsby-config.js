@@ -38,6 +38,13 @@ module.exports = {
         path: path.join(__dirname, `static`, `projects`),
       },
     },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        allExtensions: true, // defaults to false
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
