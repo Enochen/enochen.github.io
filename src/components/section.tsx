@@ -1,26 +1,30 @@
-import React from "react"
-import styled from "styled-components"
+import React, { FunctionComponent } from 'react'
+import styled from 'styled-components'
 
-const Section = styled.div`
+const Outer = styled.div`
+margin: auto;
   justify-content: center;
   display: flex;
   box-sizing: border-box;
   min-height: 100vh;
   padding-bottom: 5vh;
-`
-
-export const Wrapper = styled.div`
-  display: flex;
+  max-width: 55rem;
   flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
 `
 
-export default ({ id, children, className }) => {
+type SectionProps = {
+  id?: string
+  className?: string
+}
+
+export const Section: FunctionComponent<SectionProps> = ({
+  id,
+  children,
+  className,
+}) => {
   return (
-    <Section id={id} className={className}>
-      <Wrapper>{children}</Wrapper>
-    </Section>
+    <Outer id={id} className={className}>
+      {children}
+    </Outer>
   )
 }

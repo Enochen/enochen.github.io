@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import styled, { css } from "styled-components"
-import Section, { Wrapper } from "./section"
-import { IconContext } from "react-icons"
-import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
-import { goToTop, removeHash } from "react-scrollable-anchor"
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
+import { Section } from './section'
+import { IconContext } from 'react-icons'
+import { scale, rhythm, TABLET_MEDIA_QUERY } from '../utils/typography'
+import { goToTop, removeHash } from 'react-scrollable-anchor'
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -14,25 +14,26 @@ const HeaderWrapper = styled.div`
 `
 
 const Name = styled.h1`
-  font-weight: normal;
   ${scale(2.3)};
+  font-weight: normal;
+  padding-bottom: 0.5rem;
   transition: font-size 0.5s;
 `
 
 const Desc = styled.h2`
-  font-weight: 400;
   ${scale(1)};
+  font-weight: 400;
   transition: font-size 0.5s;
 `
 
 const About = styled.div`
+  ${scale(-2)};
   visibility: hidden;
   text-align: justify;
   width: 80%;
   margin: 0 auto;
   padding-top: ${rhythm(1.7)};
   height: 0;
-  ${scale(-2)};
   transition: font-size 0.4s, height 0.5s;
 `
 
@@ -72,8 +73,8 @@ const Icon = ({ icon, label, link, external = false, action }) => {
     : {}
   const linkProps = external
     ? {
-        target: "_blank",
-        rel: "noopener noreferrer",
+        target: '_blank',
+        rel: 'noopener noreferrer',
       }
     : {}
   const wrapperProps = link
@@ -92,15 +93,16 @@ const Icon = ({ icon, label, link, external = false, action }) => {
   )
 }
 
-const IntroSection = styled(Section)`
-  padding-bottom: 0;
+interface IntroProps {
+  readonly aboutActive: boolean
+}
 
-  ${Wrapper} {
-    max-width: 800px;
-  }
+const IntroSection = styled(Section)<IntroProps>`
+  padding-bottom: 0;
+  max-width: 45rem;
 
   ${props =>
-    props.aboutOn &&
+    props.aboutActive &&
     css`
       ${HeaderWrapper} {
         padding-top: 15vh;
@@ -147,7 +149,7 @@ const IntroSection = styled(Section)`
       padding: 0.5rem 2rem;
     }
     ${props =>
-      props.aboutOn &&
+      props.aboutActive &&
       css`
         ${Name} {
           font-size: 3rem;
@@ -173,7 +175,7 @@ export default ({ name, desc, aboutData = [], iconData = [] }) => {
     <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
   ))
   const icons = (
-    <IconContext.Provider value={{ size: "42", className: "icon" }}>
+    <IconContext.Provider value={{ size: '42', className: 'icon' }}>
       {iconData.map((x, i) =>
         x.link ? (
           <Icon key={i} {...x}></Icon>
@@ -189,7 +191,7 @@ export default ({ name, desc, aboutData = [], iconData = [] }) => {
     </IconContext.Provider>
   )
   return (
-    <IntroSection aboutOn={aboutOn}>
+    <IntroSection aboutActive={aboutOn}>
       <HeaderWrapper>
         <Name>{name}</Name>
         <Desc>{desc}</Desc>

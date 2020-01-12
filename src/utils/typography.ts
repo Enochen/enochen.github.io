@@ -1,6 +1,7 @@
-import Typography from "typography"
+import Typography, { BaseLine } from "typography"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import verticalRhythm from "compass-vertical-rhythm"
+import { CSSPseudos, CSSObject } from "styled-components"
 
 const theme = {
   title: "Dasher",
@@ -33,6 +34,8 @@ const theme = {
       },
       html: {
         backgroundColor: "#f3f3f3",
+        justifyContent: "center",
+        display: "flex",
       },
       // Mobile styles.
       [TABLET_MEDIA_QUERY]: {
@@ -46,7 +49,12 @@ const theme = {
   },
 }
 
-const typography = new Typography(theme)
+export const scale = (value:number):CSSObject => {
+  const temp:BaseLine = typography.scale(value)
+  return {fontSize: temp.fontSize, lineHeight: temp.lineHeight}
+}
+
+const typography:Typography = new Typography(theme)
 export * from "typography-breakpoint-constants"
-export const { scale, rhythm, options } = typography
+export const { rhythm, options } = typography
 export default typography

@@ -1,14 +1,14 @@
-import React from "react"
-import Section from "./section"
-import Title from "./title"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
-import { scale, rhythm, TABLET_MEDIA_QUERY } from "../utils/typography"
+import React from 'react'
+import { Section } from './section'
+import Title from './title'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
+import { scale, rhythm, TABLET_MEDIA_QUERY } from '../utils/typography'
 
 const ext = {
-  target: "_blank",
-  rel: "noopener noreferrer",
+  target: '_blank',
+  rel: 'noopener noreferrer',
 }
 
 const BodyWrapper = styled.div`
@@ -79,8 +79,8 @@ const Background = styled(BackgroundImage)`
 const Body = ({ name, desc, tags = [], github, live }) => {
   const tagData = tags.map(x => <Tag key={x}>{x}</Tag>)
   const linkData = [
-    ...(live ? [{ label: "Project", url: live }] : []),
-    ...(github ? [{ label: "Github", url: github }] : []),
+    ...(live ? [{ label: 'Project', url: live }] : []),
+    ...(github ? [{ label: 'Github', url: github }] : []),
   ]
   const links = linkData.map(x => (
     <Link key={x.label} href={x.url} {...ext}>
@@ -137,6 +137,7 @@ export const Project = info => (
 )
 
 export default ({ projData = [] }) => {
+  console.log(scale(1))
   const projectImages = useStaticQuery(
     graphql`
       query {
@@ -159,7 +160,7 @@ export default ({ projData = [] }) => {
     <Project key={i} imageData={projectImages.allFile.edges} {...x} />
   ))
   return (
-    <Section id="projects">
+    <Section ids="projects">
       <Title text="Projects"></Title>
       {projects}
     </Section>

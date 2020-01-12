@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { scale, rhythm } from "../utils/typography"
+import React from 'react'
+import styled from 'styled-components'
+import { scale, rhythm } from '../utils/typography'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1`
-  padding: 0 1rem;
   ${scale(1.5)};
+  padding: 0 1rem;
 `
 
 export default ({ text }) => (

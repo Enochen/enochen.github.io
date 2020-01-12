@@ -15,6 +15,10 @@
     "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
+    "@types/compass-vertical-rhythm": "^1.4.0",
+    "@types/react-helmet": "^5.0.15",
+    "@types/typography": "^0.16.3",
+    "@types/typography-breakpoint-constants": "^0.16.0",
     "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^2.18.17",
     "gatsby-background-image": "^0.9.12",
@@ -40,6 +44,7 @@
     "typography-breakpoint-constants": "^0.16.19"
   },
   "devDependencies": {
+    "@types/styled-components": "^4.4.2",
     "gh-pages": "^2.1.1",
     "prettier": "^1.19.1"
   },
