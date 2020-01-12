@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-const path = require(`path`)
+import path from `path`
 
 module.exports = {
   siteMetadata: {
