@@ -1,11 +1,11 @@
 import {
-  FaGithub,
-  FaNewspaper,
-  FaLinkedin,
-  FaUser,
   FaFlask,
+  FaGithub,
   FaGraduationCap,
+  FaLinkedin,
+  FaNewspaper,
   FaRegUser,
+  FaUser,
 } from "react-icons/fa"
 
 const intro = {

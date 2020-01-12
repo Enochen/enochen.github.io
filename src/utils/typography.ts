@@ -1,7 +1,6 @@
+import verticalRhythm from "compass-vertical-rhythm"
 import Typography, { BaseLine } from "typography"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
-import verticalRhythm from "compass-vertical-rhythm"
-import { CSSPseudos, CSSObject } from "styled-components"
 
 const theme = {
   title: "Dasher",
@@ -15,7 +14,7 @@ const theme = {
   headerWeight: 400,
   bodyWeight: 400,
   boldWeight: 700,
-  overrideStyles: ({ scale, rhythm }, options) => {
+  overrideStyles: () => {
     const vr = verticalRhythm({
       baseFontSize: "16px",
       baseLineHeight: "1.5",
@@ -37,7 +36,7 @@ const theme = {
         justifyContent: "center",
         display: "flex",
       },
-      // Mobile styles.
+      // Mobile
       [TABLET_MEDIA_QUERY]: {
         html: {
           ...vr.establishBaseline(),
@@ -49,7 +48,7 @@ const theme = {
   },
 }
 
-export const scale = (value:number):CSSObject => {
+export const scale = (value:number) => {
   const temp:BaseLine = typography.scale(value)
   return {fontSize: temp.fontSize, lineHeight: temp.lineHeight}
 }

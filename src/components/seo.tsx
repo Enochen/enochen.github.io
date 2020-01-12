@@ -1,19 +1,19 @@
+import { graphql, useStaticQuery } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 
 type MetaTag =
   | { name: string; content: any }
   | { property: string; content: any }
 
-interface Props {
+interface ISEOProps {
   title?: string
   description?: string
   lang?: string
   meta?: MetaTag[]
 }
 
-export const SEO: FunctionComponent<Props> = ({
+export const SEO: FunctionComponent<ISEOProps> = ({
   title = ``,
   description = ``,
   lang = `en`,

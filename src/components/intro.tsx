@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
-import { Section } from './section'
 import { IconContext } from 'react-icons'
-import { scale, rhythm, TABLET_MEDIA_QUERY } from '../utils/typography'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
+import styled, { css } from 'styled-components'
+import { rhythm, scale, TABLET_MEDIA_QUERY } from '../utils/typography'
+import { Section } from './section'
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -93,11 +93,11 @@ const Icon = ({ icon, label, link, external = false, action }) => {
   )
 }
 
-interface IntroProps {
+interface IIntroProps {
   readonly aboutActive: boolean
 }
 
-const IntroSection = styled(Section)<IntroProps>`
+const IntroSection = styled(Section)<IIntroProps>`
   padding-bottom: 0;
   max-width: 45rem;
 

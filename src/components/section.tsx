@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
 const Outer = styled.div`
-margin: auto;
+  margin: auto;
   justify-content: center;
   display: flex;
   box-sizing: border-box;
@@ -12,12 +12,12 @@ margin: auto;
   flex-direction: column;
 `
 
-type SectionProps = {
+interface ISectionProps {
   id?: string
   className?: string
 }
 
-export const Section: FunctionComponent<SectionProps> = ({
+export const Section: FunctionComponent<ISectionProps> = ({
   id,
   children,
   className,

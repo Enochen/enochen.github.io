@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { scale, rhythm } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography'
 
 const Wrapper = styled.div`
   text-align: center;

@@ -1,10 +1,10 @@
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
+import styled from 'styled-components'
+import { rhythm, scale, TABLET_MEDIA_QUERY } from '../utils/typography'
 import { Section } from './section'
 import Title from './title'
-import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
-import { scale, rhythm, TABLET_MEDIA_QUERY } from '../utils/typography'
 
 const ext = {
   target: '_blank',
@@ -137,7 +137,6 @@ export const Project = info => (
 )
 
 export default ({ projData = [] }) => {
-  console.log(scale(1))
   const projectImages = useStaticQuery(
     graphql`
       query {
