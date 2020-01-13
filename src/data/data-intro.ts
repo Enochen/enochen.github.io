@@ -9,7 +9,7 @@ import {
   FaUser,
 } from 'react-icons/fa'
 
-interface IIcon {
+export interface IIcon {
   icon: IconType
   icon2?: IconType
   label: string
@@ -17,11 +17,11 @@ interface IIcon {
   external?: boolean
 }
 
-interface IIntro {
+export interface IIntro {
   name: string
-  desc: string
-  aboutData: string[]
-  iconData: IIcon[]
+  desc?: string
+  aboutData?: string[]
+  iconData?: IIcon[]
 }
 
 export const IntroData: IIntro = {

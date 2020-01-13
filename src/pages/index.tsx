@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { removeHash } from 'react-scrollable-anchor'
-import Intro from '../components/intro'
+import {Intro} from '../components/Intro'
 import Projects from '../components/projects'
 import { SEO } from '../components/seo'
 
-import { IntroData } from '../data/IntroData'
-import { ProjectData } from '../data/ProjectData'
+import { IntroData } from '../data/data-intro'
+import { ProjectData } from '../data/data-project'
 
 const handleScroll = () => {
   if (window.scrollY <= window.innerHeight * 0.25) {

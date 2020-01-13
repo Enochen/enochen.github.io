@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Intro from '../components/intro'
+import {Intro} from '../components/Intro'
 import { SEO } from '../components/seo'
 
 export const query = graphql`
