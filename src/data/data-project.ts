@@ -1,4 +1,4 @@
-interface IProject {
+export interface IProject {
   name: string
   desc: string
   tags: string[]
