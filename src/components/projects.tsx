@@ -104,8 +104,7 @@ export const Project: FC<IProject> = ({
 export default ({ projData = [] }) => {
   const projects = projData.map((x, i) => <Project key={i} {...x} />)
   return (
-    <Section id="projects">
-      <Title text="Projects"></Title>
+    <Section id="projects" title="Projects">
       {projects}
     </Section>
   )
