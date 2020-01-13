@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React, { FunctionComponent } from 'react'
+import React, { FC } from 'react'
 import { IProject } from '../data/data-project'
 import {
   Background,
@@ -14,7 +14,7 @@ import {
   ProjectWrapper,
 } from './projects.styled'
 import { Section } from './section'
-import Title from './title'
+import { Title } from './title'
 
 const ext = {
   target: '_blank',
@@ -62,7 +62,7 @@ interface ILink {
   url: string
 }
 
-export const Project: FunctionComponent<IProject> = ({
+export const Project: FC<IProject> = ({
   name,
   desc,
   tags = [],

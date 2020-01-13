@@ -1,15 +1,15 @@
-import React, { FunctionComponent, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { IconContext } from 'react-icons'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
 import { IIcon, IIntro } from '../data/data-intro'
 import {
+  IconLabel,
   IconLink,
   IntroAbout,
   IntroDesc,
   IntroHeader,
   IntroIcon,
   IntroIconGroup,
-  IconLabel,
   IntroName,
   IntroSection,
 } from './intro.styled'
@@ -18,7 +18,7 @@ interface IIconProps extends IIcon {
   action?: () => void
 }
 
-const Icon: FunctionComponent<IIconProps> = ({
+const Icon: FC<IIconProps> = ({
   icon,
   label,
   link,
@@ -55,7 +55,7 @@ const Icon: FunctionComponent<IIconProps> = ({
   )
 }
 
-export const Intro: FunctionComponent<IIntro> = ({
+export const Intro: FC<IIntro> = ({
   name,
   desc,
   aboutData = [],
