@@ -11,7 +11,7 @@ import {
 
 export interface IIcon {
   icon: IconType
-  icon2?: IconType
+  iconAlt?: IconType
   label: string
   link?: string
   external?: boolean
@@ -35,7 +35,7 @@ export const IntroData: IIntro = {
   iconData: [
     {
       icon: FaUser,
-      icon2: FaRegUser,
+      iconAlt: FaRegUser,
       label: 'About',
     },
     {

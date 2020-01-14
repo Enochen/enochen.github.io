@@ -2,17 +2,7 @@ import React, { FC, useState } from 'react'
 import { IconContext } from 'react-icons'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
 import { IIcon, IIntro } from '../../data/data-intro'
-import {
-  IconLabel,
-  IconLink,
-  IntroAbout,
-  IntroDesc,
-  IntroHeader,
-  IntroIcon,
-  IntroIconGroup,
-  IntroName,
-  IntroSection,
-} from './intro.styled'
+import * as styled from './intro.styled'
 
 interface IIconProps extends IIcon {
   action?: () => void
@@ -26,7 +16,7 @@ const Icon: FC<IIconProps> = ({
   action,
 }) => {
   const IconElement = icon
-  const OptionalLink = link ? IconLink : React.Fragment
+  const OptionalLink = link ? styled.IconLink : React.Fragment
 
   const linkHref = link
     ? {
@@ -46,12 +36,37 @@ const Icon: FC<IIconProps> = ({
     : {}
 
   return (
-    <IntroIcon {...wrapperProps}>
+    <styled.IntroIcon {...wrapperProps}>
       <OptionalLink {...linkHref} {...linkProps}>
         <IconElement />
-        <IconLabel>{label}</IconLabel>
+        <styled.IconLabel>{label}</styled.IconLabel>
       </OptionalLink>
-    </IntroIcon>
+    </styled.IntroIcon>
+  )
+}
+
+const makeAbout = (data: string[]) => {
+  return data.map((x, i) => (
+    <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
+  ))
+}
+
+const makeIcons = (data: IIcon[], action: () => void, altIcon: boolean) => {
+  return (
+    <IconContext.Provider value={{ size: '42', className: 'icon' }}>
+      {data.map((x, i) =>
+        x.link ? (
+          <Icon key={i} {...x}></Icon>
+        ) : (
+          <Icon
+            key={i}
+            {...x}
+            action={action}
+            icon={altIcon ? x.iconAlt : x.icon}
+          ></Icon>
+        )
+      )}
+    </IconContext.Provider>
   )
 }
 
@@ -67,33 +82,16 @@ export const Intro: FC<IIntro> = ({
     goToTop()
     removeHash()
   }
-  const about = aboutData.map((x, i) => (
-    <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
-  ))
-  const icons = (
-    <IconContext.Provider value={{ size: '42', className: 'icon' }}>
-      {iconData.map((x, i) =>
-        x.link ? (
-          <Icon key={i} {...x}></Icon>
-        ) : (
-          <Icon
-            key={i}
-            {...x}
-            action={toggleAboutOn}
-            icon={aboutOn ? x.icon : x.icon2}
-          ></Icon>
-        )
-      )}
-    </IconContext.Provider>
-  )
+  const about = makeAbout(aboutData)
+  const icons = makeIcons(iconData, toggleAboutOn, aboutOn)
   return (
-    <IntroSection aboutActive={aboutOn}>
-      <IntroHeader>
-        <IntroName>{name}</IntroName>
-        <IntroDesc>{desc}</IntroDesc>
-        <IntroAbout>{about}</IntroAbout>
-      </IntroHeader>
-      <IntroIconGroup>{icons}</IntroIconGroup>
-    </IntroSection>
+    <styled.Intro aboutActive={aboutOn}>
+      <styled.Header>
+        <styled.Name>{name}</styled.Name>
+        <styled.Desc>{desc}</styled.Desc>
+        <styled.About>{about}</styled.About>
+      </styled.Header>
+      <styled.IconGroup>{icons}</styled.IconGroup>
+    </styled.Intro>
   )
 }

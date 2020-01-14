@@ -2,7 +2,7 @@ import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
 
-export const ProjectBody = styled.div`
+export const Body = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -13,24 +13,24 @@ const BodySubsection = styled.div`
   margin:  ${rhythm(0.3)} 0;
 `
 
-export const BodyName = styled(BodySubsection)`
+export const Name = styled(BodySubsection)`
   ${scale(1)};
   margin-bottom: 0.5rem;
 `
 
-export const BodyTagGroup = styled(BodySubsection)`
+export const TagGroup = styled(BodySubsection)`
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 0;
 `
 
-export const BodyDesc = styled(BodySubsection)``
+export const Desc = styled(BodySubsection)``
 
-export const BodyLinkGroup = styled(BodySubsection)`
+export const LinkGroup = styled(BodySubsection)`
   flex-wrap: wrap;
   display: flex;
 `
-export const BodyTag = styled.div`
+export const Tag = styled.div`
   ${scale(-0.3)};
   padding: 3px 10px;
   margin: 0 0.5rem 0.5rem 0;
@@ -66,7 +66,7 @@ export const Background = styled(BackgroundImage)`
   height: 100%;
 `
 
-export const ProjectWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   min-width: 300px;
   margin: 1rem;
@@ -76,7 +76,7 @@ export const ProjectWrapper = styled.div`
 
   ${TABLET_MEDIA_QUERY} {
     flex-direction: column;
-    ${ProjectBody} {
+    ${Body} {
       width: 100%;
       box-sizing: border-box;
     }

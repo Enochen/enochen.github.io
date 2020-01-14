@@ -1,19 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
 import { IProject } from '../../data/data-project'
-import {
-  Background,
-  BodyDesc,
-  BodyLink,
-  BodyLinkGroup,
-  BodyName,
-  BodyTag,
-  BodyTagGroup,
-  ImageLink,
-  ProjectBody,
-  ProjectWrapper,
-} from './projects.styled'
 import { Section } from '../Section'
+import * as styled from './projects.styled'
 
 const ext = {
   target: '_blank',
@@ -61,6 +50,18 @@ interface ILink {
   url: string
 }
 
+const makeTags = (data: string[]) => {
+  return data.map(x => <styled.Tag key={x}>{x}</styled.Tag>)
+}
+
+const makeLinks = (data: ILink[]) => {
+  return data.map(x => (
+    <styled.BodyLink key={x.label} href={x.url} {...ext}>
+      {x.label}
+    </styled.BodyLink>
+  ))
+}
+
 export const Project: FC<IProject> = ({
   name,
   desc,
@@ -70,41 +71,33 @@ export const Project: FC<IProject> = ({
   image,
 }) => {
   // Image
-  const fluid = getFluid(image)
-  const url = live ? live : github
+  const imageFluid = getFluid(image)
+  const imageURL = live ? live : github
 
   // Body
-  const tagData = tags.map(x => <BodyTag key={x}>{x}</BodyTag>)
-  const linkData: ILink[] = [
+  const tagData = makeTags(tags)
+  const links: ILink[] = [
     ...(live ? [{ label: 'Project', url: live }] : []),
     ...(github ? [{ label: 'Github', url: github }] : []),
   ]
-  const links = linkData.map(x => (
-    <BodyLink key={x.label} href={x.url} {...ext}>
-      {x.label}
-    </BodyLink>
-  ))
+  const linkData = makeLinks(links)
 
   return (
-    <ProjectWrapper>
-      <ImageLink href={url} aria-label={name} {...ext}>
-        <Background fluid={fluid}></Background>
-      </ImageLink>
-      <ProjectBody>
-        <BodyName>{name}</BodyName>
-        <BodyTagGroup>{tagData}</BodyTagGroup>
-        <BodyDesc dangerouslySetInnerHTML={{ __html: desc }}></BodyDesc>
-        <BodyLinkGroup>{links}</BodyLinkGroup>
-      </ProjectBody>
-    </ProjectWrapper>
+    <styled.Wrapper>
+      <styled.ImageLink href={imageURL} aria-label={name} {...ext}>
+        <styled.Background fluid={imageFluid}></styled.Background>
+      </styled.ImageLink>
+      <styled.Body>
+        <styled.Name>{name}</styled.Name>
+        <styled.TagGroup>{tagData}</styled.TagGroup>
+        <styled.Desc dangerouslySetInnerHTML={{ __html: desc }}></styled.Desc>
+        <styled.LinkGroup>{linkData}</styled.LinkGroup>
+      </styled.Body>
+    </styled.Wrapper>
   )
 }
 
-export interface IProjectList {
-  projData: IProject[];
-}
-
-export const Projects:FC<IProjectList> = ({ projData = [] }) => {
+export const Projects: FC<IProject[]> = ({ projData = [] }) => {
   const projects = projData.map((x, i) => <Project key={i} {...x} />)
   return (
     <Section id="projects" title="Projects">

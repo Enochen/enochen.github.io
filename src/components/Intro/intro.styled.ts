@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
 import { Section } from '../Section'
 
-export const IntroHeader = styled.div`
+export const Header = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -10,20 +10,20 @@ export const IntroHeader = styled.div`
   transition: padding-top 0.5s;
 `
 
-export const IntroName = styled.h1`
+export const Name = styled.h1`
   ${scale(2.3)};
   font-weight: normal;
   padding-bottom: 0.5rem;
   transition: font-size 0.5s;
 `
 
-export const IntroDesc = styled.h2`
+export const Desc = styled.h2`
   ${scale(1)};
   font-weight: 400;
   transition: font-size 0.5s;
 `
 
-export const IntroAbout = styled.div`
+export const About = styled.div`
   ${scale(-2)};
   visibility: hidden;
   text-align: justify;
@@ -34,7 +34,7 @@ export const IntroAbout = styled.div`
   transition: font-size 0.4s, height 0.5s;
 `
 
-export const IntroIconGroup = styled.div`
+export const IconGroup = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -63,23 +63,23 @@ interface ISectionProps {
   readonly aboutActive: boolean
 }
 
-export const IntroSection = styled(Section)<ISectionProps>`
+export const Intro = styled(Section)<ISectionProps>`
   padding-bottom: 0;
   max-width: 45rem;
 
   ${props =>
     props.aboutActive &&
     css`
-      ${IntroHeader} {
+      ${Header} {
         padding-top: 15vh;
       }
-      ${IntroName} {
+      ${Name} {
         ${scale(1.8)};
       }
-      ${IntroDesc} {
+      ${Desc} {
         ${scale(0.6)};
       }
-      ${IntroAbout} {
+      ${About} {
         visibility: visible;
         height: auto;
         ${scale(0.2)};
@@ -90,16 +90,16 @@ export const IntroSection = styled(Section)<ISectionProps>`
     .icon {
       display: none;
     }
-    ${IntroName} {
+    ${Name} {
       ${scale(1.8)};
     }
-    ${IntroDesc} {
+    ${Desc} {
       ${scale(0.6)};
     }
-    ${IntroAbout} {
+    ${About} {
       padding-top: ${rhythm(1)};
     }
-    ${IntroIconGroup} {
+    ${IconGroup} {
       flex-wrap: wrap;
       padding-bottom: 13vh;
     }
@@ -117,13 +117,13 @@ export const IntroSection = styled(Section)<ISectionProps>`
     ${props =>
       props.aboutActive &&
       css`
-        ${IntroName} {
+        ${Name} {
           font-size: 3rem;
         }
-        ${IntroDesc} {
+        ${Desc} {
           font-size: 1.2rem;
         }
-        ${IntroAbout} {
+        ${About} {
           ${scale(0.2)};
         }
       `}
