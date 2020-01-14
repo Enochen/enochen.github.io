@@ -6,9 +6,11 @@ cache:
   - node_modules
 deploy:
   provider: pages
-  skip-cleanup: true
+  edge: true
   github-token: $GITHUB_TOKEN
   local_dir: public
+  commit_message: "Automated Deployment"
+  keep_history: false
   on:
     branch: master
 before_script:
