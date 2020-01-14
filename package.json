@@ -17,10 +17,11 @@
   "dependencies": {
     "@types/compass-vertical-rhythm": "^1.4.0",
     "@types/react-helmet": "^5.0.15",
+    "@types/react-scrollable-anchor": "^0.6.0",
     "@types/typography": "^0.16.3",
     "@types/typography-breakpoint-constants": "^0.16.0",
     "compass-vertical-rhythm": "^1.4.5",
-    "gatsby": "^2.18.17",
+    "gatsby": "^2.18.21",
     "gatsby-background-image": "^0.9.12",
     "gatsby-cli": "^2.8.22",
     "gatsby-plugin-manifest": "^2.2.34",

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import { IconContext } from 'react-icons'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
-import { IIcon, IIntro } from '../data/data-intro'
+import { IIcon, IIntro } from '../../data/data-intro'
 import {
   IconLabel,
   IconLink,

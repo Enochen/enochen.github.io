@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
-import { rhythm, scale } from '../utils/typography'
+import { rhythm, scale } from '../../utils/typography'
 
 const Outer = styled.div`
   margin: auto;

@@ -32,7 +32,7 @@ const theme = {
         color: "#6460b8",
       },
       html: {
-        backgroundColor: "#f3f3f3",
+        backgroundColor: "#f1f1f1",
         justifyContent: "center",
         display: "flex",
       },

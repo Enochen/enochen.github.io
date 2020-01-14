@@ -1365,6 +1365,13 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
+"@types/react-scrollable-anchor@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@types/react-scrollable-anchor/-/react-scrollable-anchor-0.6.0.tgz#dfc2f144f02ae05083ef20d3a83085e74267e295"
+  integrity sha512-oVHslt+VBrlgdR3cv2aOnhQk75afLA2lqzCRSC21FzEd6s6q33WUnO+dJUxDsWpgb9e8S63F0vyfgA19huIkYQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "16.9.17"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.17.tgz#58f0cc0e9ec2425d1441dd7b623421a867aa253e"
@@ -5596,7 +5603,7 @@ gatsby-transformer-sharp@^2.3.9:
     semver "^5.7.1"
     sharp "^0.23.4"
 
-gatsby@^2.18.17:
+gatsby@^2.18.21:
   version "2.18.21"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.18.21.tgz#06897f3087c6255214bdedfd2d7a7be16fa6daaa"
   integrity sha512-/OZKRzzXnv6eVlhPkWD4gPve/O3lj9gxoGadCZi2dnuQNXMavIWXlcKjawVlEcyRYSO3MWqe/K0FewnaxbPFTA==

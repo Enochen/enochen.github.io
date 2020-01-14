@@ -1,16 +1,16 @@
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
-import { rhythm, scale, TABLET_MEDIA_QUERY } from '../utils/typography'
+import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
 
 export const ProjectBody = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
-  padding: 1.3rem;
+  padding: ${rhythm(0.5)} ${rhythm(0.8)};
 `
 
 const BodySubsection = styled.div`
-  margin: 0.5rem 0;
+  margin:  ${rhythm(0.3)} 0;
 `
 
 export const BodyName = styled(BodySubsection)`
@@ -24,6 +24,12 @@ export const BodyTagGroup = styled(BodySubsection)`
   margin-bottom: 0;
 `
 
+export const BodyDesc = styled(BodySubsection)``
+
+export const BodyLinkGroup = styled(BodySubsection)`
+  flex-wrap: wrap;
+  display: flex;
+`
 export const BodyTag = styled.div`
   ${scale(-0.3)};
   padding: 3px 10px;
@@ -33,13 +39,6 @@ export const BodyTag = styled.div`
   background: #e6e6e6;
   border-radius: 5px;
   transition: color 1s, background 1s;
-`
-
-export const BodyDesc = styled(BodySubsection)``
-
-export const BodyLinkGroup = styled(BodySubsection)`
-  flex-wrap: wrap;
-  display: flex;
 `
 
 export const BodyLink = styled.a`

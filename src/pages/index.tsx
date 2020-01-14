@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { removeHash } from 'react-scrollable-anchor'
-import {Intro} from '../components/Intro'
-import Projects from '../components/projects'
-import { SEO } from '../components/seo'
+import { Intro } from '../components/Intro'
+import { Projects } from '../components/Projects'
+import { SEO } from '../components/SEO'
 
 import { IntroData } from '../data/data-intro'
 import { ProjectData } from '../data/data-project'

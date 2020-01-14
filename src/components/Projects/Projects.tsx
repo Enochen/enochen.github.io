@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
-import { IProject } from '../data/data-project'
+import { IProject } from '../../data/data-project'
 import {
   Background,
   BodyDesc,
@@ -13,8 +13,7 @@ import {
   ProjectBody,
   ProjectWrapper,
 } from './projects.styled'
-import { Section } from './section'
-import { Title } from './title'
+import { Section } from '../Section'
 
 const ext = {
   target: '_blank',
@@ -101,7 +100,11 @@ export const Project: FC<IProject> = ({
   )
 }
 
-export default ({ projData = [] }) => {
+export interface IProjectList {
+  projData: IProject[];
+}
+
+export const Projects:FC<IProjectList> = ({ projData = [] }) => {
   const projects = projData.map((x, i) => <Project key={i} {...x} />)
   return (
     <Section id="projects" title="Projects">

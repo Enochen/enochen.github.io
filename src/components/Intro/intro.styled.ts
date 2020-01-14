@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { rhythm, scale, TABLET_MEDIA_QUERY } from '../utils/typography'
-import { Section } from './section'
+import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
+import { Section } from '../Section'
 
 export const IntroHeader = styled.div`
   text-align: center;
