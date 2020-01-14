@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@types/compass-vertical-rhythm": "^1.4.0",
+    "@types/jest": "^24.0.25",
     "@types/react-helmet": "^5.0.15",
     "@types/react-scrollable-anchor": "^0.6.0",
     "@types/styled-components": "^4.4.2",
