@@ -1,14 +1,14 @@
 import React, { FC, useState } from 'react'
 import { IconContext } from 'react-icons'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
-import { IIcon, IIntro } from '../../data/data-intro'
+import { IconInfo, IntroInfo } from '../../data/introData'
 import * as styled from './Intro.styled'
 
-interface IIconProps extends IIcon {
+interface IconProps extends IconInfo {
   action?: () => void
 }
 
-const Icon: FC<IIconProps> = ({
+const Icon: FC<IconProps> = ({
   icon,
   label,
   link,
@@ -51,7 +51,7 @@ const makeAbout = (data: string[]) => {
   ))
 }
 
-const makeIcons = (data: IIcon[], action: () => void, altIcon: boolean) => {
+const makeIcons = (data: IconInfo[], action: () => void, altIcon: boolean) => {
   return (
     <IconContext.Provider value={{ size: '42', className: 'icon' }}>
       {data.map((x, i) =>
@@ -70,7 +70,7 @@ const makeIcons = (data: IIcon[], action: () => void, altIcon: boolean) => {
   )
 }
 
-export const Intro: FC<IIntro> = ({
+export const Intro: FC<IntroInfo> = ({
   name,
   desc,
   aboutData = [],

@@ -59,11 +59,11 @@ export const IconLabel = styled.div`
   user-select: none;
 `
 
-interface ISectionProps {
+interface SectionProps {
   readonly aboutActive: boolean
 }
 
-export const Intro = styled(Section)<ISectionProps>`
+export const Intro = styled(Section)<SectionProps>`
   padding-bottom: 0;
   max-width: 45rem;
 

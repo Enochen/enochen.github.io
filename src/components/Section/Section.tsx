@@ -26,7 +26,7 @@ const Heading = styled.h1`
   padding: 0 1rem;
 `
 
-interface ISectionProps {
+interface SectionProps {
   id?: string
   title?: string
   className?: string
@@ -43,7 +43,7 @@ const Title = ({ title }) => {
   return null
 }
 
-export const Section: FunctionComponent<ISectionProps> = ({
+export const Section: FunctionComponent<SectionProps> = ({
   id,
   title,
   className,

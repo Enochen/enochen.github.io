@@ -1,2 +1,2 @@
-export * from './data-intro'
-export * from './data-project'
+export * from './introData'
+export * from './projectData'

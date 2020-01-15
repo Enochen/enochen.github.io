@@ -1,4 +1,4 @@
-export interface IProject {
+export interface ProjectInfo {
   name: string
   desc: string
   tags: string[]
@@ -7,11 +7,11 @@ export interface IProject {
   image: string
 }
 
-export interface IProjectList {
-  data: IProject[]
+export interface ProjectList {
+  data: ProjectInfo[]
 }
 
-export const ProjectData: IProjectList = {
+export const ProjectData: ProjectList = {
   data: [
     {
       name: 'cue',

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
-import { IProject, IProjectList } from '../../data/data-project'
+import { ProjectInfo, ProjectList } from '../../data/projectData'
 import { ImagesGraph, Fluid } from '../../utils/types'
 import { Section } from '../Section'
 import * as styled from './Projects.styled'
@@ -45,7 +45,7 @@ const makeLinks = (data: LinkProps[]) => {
   ))
 }
 
-interface ProjectFluid extends IProject {
+interface ProjectFluid extends ProjectInfo {
   fluid: Fluid
 }
 
@@ -83,13 +83,13 @@ export const Project: FC<ProjectFluid> = ({
   )
 }
 
-export const makeProjects = (data: IProject[], imagesGraph: ImagesGraph) => {
+export const makeProjects = (data: ProjectInfo[], imagesGraph: ImagesGraph) => {
   return data.map((x, i) => (
     <Project key={i} fluid={getFluid(x.image, imagesGraph)} {...x} />
   ))
 }
 
-export const Projects: FC<IProjectList> = ({ data }) => {
+export const Projects: FC<ProjectList> = ({ data }) => {
   const images: ImagesGraph = useStaticQuery(
     graphql`
       query {

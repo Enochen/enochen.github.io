@@ -1,11 +1,11 @@
 import React from 'react'
 import { FaFlask, FaRegUser, FaUser } from 'react-icons/fa'
 import renderer from 'react-test-renderer'
-import { IIntro } from '../../data'
+import { IntroInfo } from '../../data'
 import { Intro } from '../Intro/Intro'
 describe('Intro Section', () => {
   it('renders correctly', () => {
-    const introData: IIntro = {
+    const introData: IntroInfo = {
       name: 'George Washington',
       desc: 'SWE @ Apple',
       aboutData: [

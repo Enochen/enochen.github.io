@@ -6,14 +6,14 @@ type MetaTag =
   | { name: string; content: any }
   | { property: string; content: any }
 
-interface ISEOProps {
+interface SEOProps {
   title?: string
   description?: string
   lang?: string
   meta?: MetaTag[]
 }
 
-export const SEO: FunctionComponent<ISEOProps> = ({
+export const SEO: FunctionComponent<SEOProps> = ({
   title = ``,
   description = ``,
   lang = `en`,
