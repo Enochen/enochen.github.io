@@ -10,7 +10,7 @@ export const Body = styled.div`
 `
 
 const BodySubsection = styled.div`
-  margin:  ${rhythm(0.3)} 0;
+  margin: ${rhythm(0.3)} 0;
 `
 
 export const Name = styled(BodySubsection)`
@@ -61,11 +61,10 @@ export const ImageLink = styled.a`
   overflow: auto;
 `
 
-export const Background = () => {
-  return styled(BackgroundImage)`
+export const Background = styled(BackgroundImage)`
   background-position: top;
   height: 100%;
-`}
+`
 
 export const Wrapper = styled.div`
   display: flex;
