@@ -2,7 +2,7 @@ import React from 'react'
 import { FaFlask, FaRegUser, FaUser } from 'react-icons/fa'
 import renderer from 'react-test-renderer'
 import { IIntro } from '../../data'
-import { Intro } from '../Intro'
+import { Intro } from '../Intro/Intro'
 describe('Intro Section', () => {
   it('renders correctly', () => {
     const introData: IIntro = {
