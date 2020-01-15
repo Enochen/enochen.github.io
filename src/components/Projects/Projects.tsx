@@ -45,11 +45,11 @@ const makeLinks = (data: LinkProps[]) => {
   ))
 }
 
-interface ProjectWithFluid extends IProject {
+interface ProjectFluid extends IProject {
   fluid: Fluid
 }
 
-export const Project: FC<ProjectWithFluid> = ({
+export const Project: FC<ProjectFluid> = ({
   name,
   desc,
   tags = [],
@@ -83,23 +83,10 @@ export const Project: FC<ProjectWithFluid> = ({
   )
 }
 
-const makeProjects = (data: IProject[], imagesGraph: ImagesGraph) => {
+export const makeProjects = (data: IProject[], imagesGraph: ImagesGraph) => {
   return data.map((x, i) => (
     <Project key={i} fluid={getFluid(x.image, imagesGraph)} {...x} />
   ))
-}
-
-interface PureProjectList extends IProjectList {
-  images: ImagesGraph
-}
-
-export const PureProjects: FC<PureProjectList> = ({ data, images }) => {
-  const projects = makeProjects(data, images)
-  return (
-    <Section id="projects" title="Projects">
-      {projects}
-    </Section>
-  )
 }
 
 export const Projects: FC<IProjectList> = ({ data }) => {
@@ -121,5 +108,10 @@ export const Projects: FC<IProjectList> = ({ data }) => {
       }
     `
   )
-  return <PureProjects data={data} images={images} />
+  const projects = makeProjects(data, images)
+  return (
+    <Section id="projects" title="Projects">
+      {projects}
+    </Section>
+  )
 }

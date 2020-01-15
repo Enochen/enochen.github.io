@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { IconContext } from 'react-icons'
 import { goToTop, removeHash } from 'react-scrollable-anchor'
 import { IIcon, IIntro } from '../../data/data-intro'
-import * as styled from './intro.styled'
+import * as styled from './Intro.styled'
 
 interface IIconProps extends IIcon {
   action?: () => void

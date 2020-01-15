@@ -61,10 +61,11 @@ export const ImageLink = styled.a`
   overflow: auto;
 `
 
-export const Background = styled(BackgroundImage)`
+export const Background = () => {
+  return styled(BackgroundImage)`
   background-position: top;
   height: 100%;
-`
+`}
 
 export const Wrapper = styled.div`
   display: flex;
