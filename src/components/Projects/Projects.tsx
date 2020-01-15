@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { IProject, IProjectList } from '../../data/data-project'
 import { ImagesGraph, Fluid } from '../../utils/types'
 import { Section } from '../Section'
-import * as styled from './projects.styled'
+import * as styled from './Projects.styled'
 
 const ext = {
   target: '_blank',
