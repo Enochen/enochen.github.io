@@ -7,7 +7,8 @@
     "jsRules": {},
     "rules": {
         "object-literal-sort-keys": false,
-        "no-submodule-imports": [true, "react-icons"]
+        "no-submodule-imports": [true, "react-icons"],
+        "interface-name": [true, "never-prefix"]
     },
     "rulesDirectory": []
 }
