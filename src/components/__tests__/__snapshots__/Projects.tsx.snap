@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects Section renders correctly 1`] = `
+<div
+  className="sc-AykKC cyoTwy"
+  id="projects"
+>
+  <div
+    className="sc-AykKD dhTwqA"
+  >
+    <h1
+      className="sc-AykKE dZpaAc"
+    >
+      Projects
+    </h1>
+  </div>
+  <div
+    className="sc-fzXfLS dUPWpO"
+  >
+    <a
+      aria-label="Google"
+      className="sc-fzXfLQ fweGBN"
+      href="https://google.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        className="sc-fzXfLR kWqkrD gbi-773652653-3oim9gNw2qp9AZy6x1AYt1 gatsby-image-wrapper"
+        style={
+          Object {
+            "background-position": "top",
+            "backgroundPosition": "center",
+            "backgroundRepeat": "no-repeat",
+            "backgroundSize": "cover",
+            "opacity": 0.99,
+            "position": "relative",
+          }
+        }
+      >
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "
+          .sc-fzXfLR.kWqkrD.gbi-773652653-3oim9gNw2qp9AZy6x1AYt1:before,
+          .sc-fzXfLR.kWqkrD.gbi-773652653-3oim9gNw2qp9AZy6x1AYt1:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            
+            transition: opacity 0.5s ease 0.25s;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+backgroundposition: top;
+
+          }
+          .sc-fzXfLR.kWqkrD.gbi-773652653-3oim9gNw2qp9AZy6x1AYt1:before {
+            z-index: -100;
+            
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAX8Yob0hYR//xAAbEAACAwADAAAAAAAAAAAAAAAAAgMREgETIf/aAAgBAQABBQJmoilblrO037s//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAABAxARH/2gAIAQEABj8COaoRf//EABsQAQEBAAIDAAAAAAAAAAAAABEBABAhMWGh/9oACAEBAAE/IQdNtSTDX5wpAnvSTfPRRN//2gAMAwEAAgADAAAAEKw//8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/EFB//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXFh/9oACAEBAAE/EHRTJ2K5UuWpXVjX3ifcLq1M537kAY07v2MNO/s//9k=);
+            opacity: 0; 
+          }
+          .sc-fzXfLR.kWqkrD.gbi-773652653-3oim9gNw2qp9AZy6x1AYt1:after {
+            z-index: -101;
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAX8Yob0hYR//xAAbEAACAwADAAAAAAAAAAAAAAAAAgMREgETIf/aAAgBAQABBQJmoilblrO037s//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAABAxARH/2gAIAQEABj8COaoRf//EABsQAQEBAAIDAAAAAAAAAAAAABEBABAhMWGh/9oACAEBAAE/IQdNtSTDX5wpAnvSTfPRRN//2gAMAwEAAgADAAAAEKw//8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAEDAQE/EFB//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAAMAAwEBAAAAAAAAAAAAAQARITFBUXFh/9oACAEBAAE/EHRTJ2K5UuWpXVjX3ifcLq1M537kAY07v2MNO/s//9k=);
+            
+            
+          }
+        ",
+            }
+          }
+        />
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "
+    .sc-fzXfLR.kWqkrD.gbi-773652653-3oim9gNw2qp9AZy6x1AYt1:before {
+      opacity: 1;
+      background-image: url('/static/1ef070b1ed84e0e52d2895ad9de033cf/c26dd/default.jpg');
+    }",
+              }
+            }
+          />
+        </noscript>
+      </div>
+    </a>
+    <div
+      className="sc-AykKF hukWXa"
+    >
+      <div
+        className="sc-AykKG sc-AykKH Opbog"
+      >
+        Google
+      </div>
+      <div
+        className="sc-AykKG sc-AykKI klVsbl"
+      >
+        <div
+          className="sc-fzXfLO bpdGYk"
+        >
+          HTML/CSS
+        </div>
+      </div>
+      <div
+        className="sc-AykKG sc-AykKJ gtgQKK"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "I made google",
+          }
+        }
+      />
+      <div
+        className="sc-AykKG sc-AykKK soPFw"
+      >
+        <a
+          className="sc-fzXfLP dvxyfQ"
+          href="https://google.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Project
+        </a>
+        <a
+          className="sc-fzXfLP dvxyfQ"
+          href="https://github.com/google/google"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Github
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-fzXfLS dUPWpO"
+  >
+    <a
+      aria-label="cue"
+      className="sc-fzXfLQ fweGBN"
+      href="https://www.cornelldti.org/Projects/events"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        className="sc-fzXfLR kWqkrD gbi--1810794872-4awbyijmSKcBDc9BVyxqWm gatsby-image-wrapper"
+        style={
+          Object {
+            "background-position": "top",
+            "backgroundPosition": "center",
+            "backgroundRepeat": "no-repeat",
+            "backgroundSize": "cover",
+            "opacity": 0.99,
+            "position": "relative",
+          }
+        }
+      >
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "
+          .sc-fzXfLR.kWqkrD.gbi--1810794872-4awbyijmSKcBDc9BVyxqWm:before,
+          .sc-fzXfLR.kWqkrD.gbi--1810794872-4awbyijmSKcBDc9BVyxqWm:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            
+            transition: opacity 0.5s ease 0.25s;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+backgroundposition: top;
+
+          }
+          .sc-fzXfLR.kWqkrD.gbi--1810794872-4awbyijmSKcBDc9BVyxqWm:before {
+            z-index: -100;
+            
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7ylE2gE5aVDAr//EAB4QAAIBAwUAAAAAAAAAAAAAAAECAwAQEgQREyAh/9oACAEBAAEFAjXtpY+RV04SzjIYbDp//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACEBESICFR/9oACAEBAAY/ApxJpcc72KVA6//EABgQAAMBAQAAAAAAAAAAAAAAAAERIQAQ/9oACAEBAAE/IS0DghEA3NaIsOcCxgLTOHLn/9oADAMBAAIAAwAAABAjybz/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAp/8QAFhEBAQEAAAAAAAAAAAAAAAAAEEER/9oACAECAQE/EIZT/8QAHRABAQACAgMBAAAAAAAAAAAAAREAECFBMVGBkf/aAAgBAQABPxBBALcaGj3y6hwinHjBYIdOZgePmiCoPYzBkdU96FMBe/3X/9k=);
+            opacity: 0; 
+          }
+          .sc-fzXfLR.kWqkrD.gbi--1810794872-4awbyijmSKcBDc9BVyxqWm:after {
+            z-index: -101;
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7ylE2gE5aVDAr//EAB4QAAIBAwUAAAAAAAAAAAAAAAECAwAQEgQREyAh/9oACAEBAAEFAjXtpY+RV04SzjIYbDp//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACEBESICFR/9oACAEBAAY/ApxJpcc72KVA6//EABgQAAMBAQAAAAAAAAAAAAAAAAERIQAQ/9oACAEBAAE/IS0DghEA3NaIsOcCxgLTOHLn/9oADAMBAAIAAwAAABAjybz/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAp/8QAFhEBAQEAAAAAAAAAAAAAAAAAEEER/9oACAECAQE/EIZT/8QAHRABAQACAgMBAAAAAAAAAAAAAREAECFBMVGBkf/aAAgBAQABPxBBALcaGj3y6hwinHjBYIdOZgePmiCoPYzBkdU96FMBe/3X/9k=);
+            
+            
+          }
+        ",
+            }
+          }
+        />
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "
+    .sc-fzXfLR.kWqkrD.gbi--1810794872-4awbyijmSKcBDc9BVyxqWm:before {
+      opacity: 1;
+      background-image: url('/static/12f91ede981c5c0f871ac7b5b8969da8/c26dd/cue.jpg');
+    }",
+              }
+            }
+          />
+        </noscript>
+      </div>
+    </a>
+    <div
+      className="sc-AykKF hukWXa"
+    >
+      <div
+        className="sc-AykKG sc-AykKH Opbog"
+      >
+        cue
+      </div>
+      <div
+        className="sc-AykKG sc-AykKI klVsbl"
+      >
+        <div
+          className="sc-fzXfLO bpdGYk"
+        >
+          Python
+        </div>
+      </div>
+      <div
+        className="sc-AykKG sc-AykKJ gtgQKK"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "right on cue!",
+          }
+        }
+      />
+      <div
+        className="sc-AykKG sc-AykKK soPFw"
+      >
+        <a
+          className="sc-fzXfLP dvxyfQ"
+          href="https://www.cornelldti.org/Projects/events"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Project
+        </a>
+        <a
+          className="sc-fzXfLP dvxyfQ"
+          href="https://github.com/cornell-dti/events-backend/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Github
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

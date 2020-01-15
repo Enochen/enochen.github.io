@@ -25,7 +25,7 @@ export default () => {
     <>
       <SEO />
       <Intro {...IntroData} />
-      <Projects projData={ProjectData} />
+      <Projects {...ProjectData} />
     </>
   )
 }
