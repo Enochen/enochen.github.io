@@ -10,17 +10,34 @@ export const Header = styled.div`
   transition: padding-top 0.5s;
 `
 
+export const NameGroup = styled.div`
+  margin: auto;
+  &:hover {
+    color: #6460b8;
+    cursor: pointer;
+  }
+`
+
+const NameStyle = css`
+  color: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 export const Name = styled.h1`
   ${scale(2.3)};
   font-weight: normal;
   padding-bottom: 0.5rem;
   transition: font-size 0.5s;
+  ${NameStyle}
 `
 
 export const Desc = styled.h2`
   ${scale(1)};
   font-weight: 400;
   transition: font-size 0.5s;
+  ${NameStyle}
 `
 
 export const About = styled.div`

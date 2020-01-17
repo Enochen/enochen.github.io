@@ -87,8 +87,10 @@ export const Intro: FC<IntroInfo> = ({
   return (
     <styled.Intro aboutActive={aboutOn}>
       <styled.Header>
-        <styled.Name>{name}</styled.Name>
-        <styled.Desc>{desc}</styled.Desc>
+        <styled.NameGroup onClick={toggleAboutOn}>
+          <styled.Name>{name}</styled.Name>
+          <styled.Desc>{desc}</styled.Desc>
+        </styled.NameGroup>
         <styled.About>{about}</styled.About>
       </styled.Header>
       <styled.IconGroup>{icons}</styled.IconGroup>
