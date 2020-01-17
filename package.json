@@ -43,7 +43,7 @@
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typeface-source-sans-pro": "0.0.75",
-    "typescript": "^3.7.4",
+    "typescript": "^3.7.5",
     "typography": "^0.16.19",
     "typography-breakpoint-constants": "^0.16.19"
   },
