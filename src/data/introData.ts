@@ -34,8 +34,8 @@ export const IntroData: IntroInfo = {
   ],
   iconData: [
     {
-      icon: FaUser,
-      iconAlt: FaRegUser,
+      icon: FaRegUser,
+      iconAlt: FaUser,
       label: 'About',
     },
     {
