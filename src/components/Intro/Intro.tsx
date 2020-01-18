@@ -8,7 +8,7 @@ interface IconProps extends IconInfo {
   action?: () => void
 }
 
-const Icon: FC<IconProps> = ({
+const Icon: FC<IconInfo> = ({
   icon,
   label,
   link,
@@ -45,6 +45,26 @@ const Icon: FC<IconProps> = ({
   )
 }
 
+const ActionIcon: FC<IconProps> = ({
+  icon,
+  label,
+  action,
+}) => {
+  const IconElement = icon
+  const wrapperProps = action
+    ? {
+        onClick: action,
+      }
+    : {}
+
+  return (
+    <styled.IntroIcon {...wrapperProps}>
+        <IconElement />
+        <styled.IconLabel>{label}</styled.IconLabel>
+    </styled.IntroIcon>
+  )
+}
+
 const makeAbout = (data: string[]) => {
   return data.map((x, i) => (
     <p key={i} dangerouslySetInnerHTML={{ __html: x }} />
@@ -58,12 +78,12 @@ const makeIcons = (data: IconInfo[], action: () => void, altIcon: boolean) => {
         x.link ? (
           <Icon key={i} {...x}></Icon>
         ) : (
-          <Icon
+          <ActionIcon
             key={i}
             {...x}
             action={action}
             icon={altIcon ? x.iconAlt : x.icon}
-          ></Icon>
+          ></ActionIcon>
         )
       )}
     </IconContext.Provider>

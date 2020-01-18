@@ -37,7 +37,6 @@ export const Tag = styled.div`
   font-weight: 600;
   text-align: center;
   background: #e6e6e6;
-  border-radius: 5px;
   transition: color 1s, background 1s;
 `
 
@@ -46,7 +45,6 @@ export const BodyLink = styled.a`
   text-decoration: none;
   padding: 5px 12px;
   border: 1px solid #6460b8;
-  border-radius: 5px;
   margin-right: 1rem;
 
   &:hover {
