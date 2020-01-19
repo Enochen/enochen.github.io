@@ -20,6 +20,7 @@ export const NameGroup = styled.div`
 
 const NameStyle = css`
   color: inherit;
+  transition: font-size 0.5s;
   &:hover {
     cursor: pointer;
   }
@@ -27,28 +28,24 @@ const NameStyle = css`
 
 export const Name = styled.h1`
   ${scale(2.3)};
-  font-weight: normal;
-  padding-bottom: 0.5rem;
-  transition: font-size 0.5s;
   ${NameStyle}
 `
 
 export const Desc = styled.h2`
   ${scale(1)};
-  font-weight: 400;
-  transition: font-size 0.5s;
   ${NameStyle}
 `
 
 export const About = styled.div`
-  ${scale(-2)};
+  ${scale(0.2)};
   visibility: hidden;
+  opacity: 0;
   text-align: justify;
   width: 80%;
   margin: 0 auto;
   padding-top: ${rhythm(1.7)};
   height: 0;
-  transition: font-size 0.4s, height 0.5s;
+  transition: font-size 0.5s, height 0.5s;
 `
 
 export const IconGroup = styled.div`
@@ -92,14 +89,17 @@ export const Intro = styled(Section)<SectionProps>`
       }
       ${Name} {
         ${scale(1.8)};
+        padding-bottom: 0rem;
       }
       ${Desc} {
         ${scale(0.6)};
       }
       ${About} {
         visibility: visible;
+        opacity: 1;
         height: auto;
         ${scale(0.2)};
+        transition: font-size 0.5s, height 0.5s, visibility 0.5s, opacity 0.5s;
       }
     `}
 

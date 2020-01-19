@@ -12,18 +12,18 @@ exports[`Intro Section renders correctly 1`] = `
       onClick={[Function]}
     >
       <h1
-        className="sc-AykKH enaBBc"
+        className="sc-AykKH KIOyR"
       >
         George Washington
       </h1>
       <h2
-        className="sc-AykKI fGRbQr"
+        className="sc-AykKI gOTsKA"
       >
         SWE @ Apple
       </h2>
     </div>
     <div
-      className="sc-AykKJ hRHMTf"
+      className="sc-AykKJ kWwtkL"
     >
       <p
         dangerouslySetInnerHTML={

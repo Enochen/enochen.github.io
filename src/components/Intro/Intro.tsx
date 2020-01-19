@@ -6,15 +6,10 @@ import * as styled from './Intro.styled'
 
 interface IconProps extends IconInfo {
   action?: () => void
+  state?: boolean
 }
 
-const Icon: FC<IconInfo> = ({
-  icon,
-  label,
-  link,
-  external = false,
-  action,
-}) => {
+const Icon: FC<IconInfo> = ({ icon, label, link, external = false }) => {
   const IconElement = icon
   const OptionalLink = link ? styled.IconLink : React.Fragment
 
@@ -29,14 +24,9 @@ const Icon: FC<IconInfo> = ({
         rel: 'noopener noreferrer',
       }
     : {}
-  const wrapperProps = action
-    ? {
-        onClick: action,
-      }
-    : {}
 
   return (
-    <styled.IntroIcon {...wrapperProps}>
+    <styled.IntroIcon>
       <OptionalLink {...linkHref} {...linkProps}>
         <IconElement />
         <styled.IconLabel>{label}</styled.IconLabel>
@@ -45,12 +35,8 @@ const Icon: FC<IconInfo> = ({
   )
 }
 
-const ActionIcon: FC<IconProps> = ({
-  icon,
-  label,
-  action,
-}) => {
-  const IconElement = icon
+const ActionIcon: FC<IconProps> = ({ icon, iconAlt, label, action, state }) => {
+  const IconElement = state ? iconAlt : icon
   const wrapperProps = action
     ? {
         onClick: action,
@@ -59,8 +45,8 @@ const ActionIcon: FC<IconProps> = ({
 
   return (
     <styled.IntroIcon {...wrapperProps}>
-        <IconElement />
-        <styled.IconLabel>{label}</styled.IconLabel>
+      <IconElement />
+      <styled.IconLabel>{label}</styled.IconLabel>
     </styled.IntroIcon>
   )
 }
@@ -71,19 +57,14 @@ const makeAbout = (data: string[]) => {
   ))
 }
 
-const makeIcons = (data: IconInfo[], action: () => void, altIcon: boolean) => {
+const makeIcons = (data: IconInfo[], state: boolean, action: () => void) => {
   return (
     <IconContext.Provider value={{ size: '42', className: 'icon' }}>
       {data.map((x, i) =>
         x.link ? (
           <Icon key={i} {...x}></Icon>
         ) : (
-          <ActionIcon
-            key={i}
-            {...x}
-            action={action}
-            icon={altIcon ? x.iconAlt : x.icon}
-          ></ActionIcon>
+          <ActionIcon key={i} {...x} action={action} state={state}></ActionIcon>
         )
       )}
     </IconContext.Provider>
@@ -98,12 +79,13 @@ export const Intro: FC<IntroInfo> = ({
 }) => {
   const [aboutOn, setAboutOn] = useState(false)
   const toggleAboutOn = () => {
+    if (!aboutOn) {
+      goToTop()
+    }
     setAboutOn(!aboutOn)
-    goToTop()
-    removeHash()
   }
   const about = makeAbout(aboutData)
-  const icons = makeIcons(iconData, toggleAboutOn, aboutOn)
+  const icons = makeIcons(iconData, aboutOn, toggleAboutOn)
   return (
     <styled.Intro aboutActive={aboutOn}>
       <styled.Header>
