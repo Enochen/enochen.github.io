@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Page renders correctly 1`] = `
+<div
+  className="sc-AykKC cyoTwy sc-fzXfLU dYFJPF"
+>
+  <div
+    className="sc-AykKF bUlJgU"
+  >
+    <div
+      className="sc-AykKG eLNwia"
+    >
+      <h1
+        className="sc-AykKI jZVfIj"
+      >
+        Whoopsiess
+      </h1>
+      <h2
+        className="sc-AykKK eFuClL"
+      >
+        40404 we did a whoooopsiess
+      </h2>
+    </div>
+  </div>
+  <div
+    className="sc-fzXfLQ fkALgY"
+  />
+</div>
+`;

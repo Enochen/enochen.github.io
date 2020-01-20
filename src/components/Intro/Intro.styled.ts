@@ -10,30 +10,36 @@ export const Header = styled.div`
   transition: padding-top 0.5s;
 `
 
-export const NameGroup = styled.div`
+export const BaseNameGroup = styled.div`
   margin: auto;
+`
+
+export const NameGroup = styled(BaseNameGroup)`
   &:hover {
     color: #6460b8;
     cursor: pointer;
   }
 `
 
-const NameStyle = css`
+const LinkStyle = css`
   color: inherit;
   transition: font-size 0.5s;
-  &:hover {
-    cursor: pointer;
-  }
 `
 
-export const Name = styled.h1`
+export const BaseName = styled.h1`
   ${scale(2.3)};
-  ${NameStyle}
 `
 
-export const Desc = styled.h2`
+export const Name = styled(BaseName)`
+  ${LinkStyle}
+`
+
+export const BaseDesc = styled.h2`
   ${scale(1)};
-  ${NameStyle}
+`
+
+export const Desc = styled(BaseDesc)`
+  ${LinkStyle}
 `
 
 export const About = styled.div`
@@ -74,7 +80,7 @@ export const IconLabel = styled.div`
 `
 
 interface SectionProps {
-  readonly aboutActive: boolean
+  readonly aboutActive?: boolean
 }
 
 export const Intro = styled(Section)<SectionProps>`

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import { Intro } from '../components/Intro'
+import { ErrorPage } from '../components/misc/ErrorPage'
 import { SEO } from '../components/misc/SEO'
 
 export const query = graphql`
@@ -17,6 +17,6 @@ export const query = graphql`
 export default () => (
   <>
     <SEO />
-    <Intro name="404" desc="whoops" />
+    <ErrorPage name="404" desc="whoops" />
   </>
 )

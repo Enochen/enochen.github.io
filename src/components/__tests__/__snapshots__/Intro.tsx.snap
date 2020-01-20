@@ -2,28 +2,28 @@
 
 exports[`Intro Section renders correctly 1`] = `
 <div
-  className="sc-AykKC cyoTwy sc-fzXfLR gFvLxC"
+  className="sc-AykKC cyoTwy sc-fzXfLU dYFJPF"
 >
   <div
     className="sc-AykKF bUlJgU"
   >
     <div
-      className="sc-AykKG czUFsH"
+      className="sc-AykKG sc-AykKH dDoQcn"
       onClick={[Function]}
     >
       <h1
-        className="sc-AykKH KIOyR"
+        className="sc-AykKI sc-AykKJ cDZpPB"
       >
         George Washington
       </h1>
       <h2
-        className="sc-AykKI gOTsKA"
+        className="sc-AykKK sc-fzXfLO cwZsaC"
       >
         SWE @ Apple
       </h2>
     </div>
     <div
-      className="sc-AykKJ kWwtkL"
+      className="sc-fzXfLP jdwcIv"
     >
       <p
         dangerouslySetInnerHTML={
@@ -49,10 +49,10 @@ exports[`Intro Section renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-AykKK dqfJGk"
+    className="sc-fzXfLQ fkALgY"
   >
     <div
-      className="sc-fzXfLO bbjsKl"
+      className="sc-fzXfLR bvAajk"
       onClick={[Function]}
     >
       <svg
@@ -75,16 +75,16 @@ exports[`Intro Section renders correctly 1`] = `
         />
       </svg>
       <div
-        className="sc-fzXfLQ qCmgr"
+        className="sc-fzXfLT gqlgam"
       >
         About Me!
       </div>
     </div>
     <div
-      className="sc-fzXfLO bbjsKl"
+      className="sc-fzXfLR bvAajk"
     >
       <a
-        className="sc-fzXfLP OAAQV"
+        className="sc-fzXfLS kPEqYs"
         href="#science"
       >
         <svg
@@ -107,7 +107,7 @@ exports[`Intro Section renders correctly 1`] = `
           />
         </svg>
         <div
-          className="sc-fzXfLQ qCmgr"
+          className="sc-fzXfLT gqlgam"
         >
           My Science Experiments
         </div>
