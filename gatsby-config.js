@@ -39,10 +39,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
+        host: 'https://enochen.me',
+        policy: [{ userAgent: '*', allow: '/$', disallow: '/misc' }],
       },
     },
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
