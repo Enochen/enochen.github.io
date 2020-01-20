@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { removeHash } from 'react-scrollable-anchor'
 import { Intro } from '../components/Intro'
 import { Projects } from '../components/Projects'
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/misc/SEO'
 
 import { IntroData } from '../data/introData'
 import { ProjectData } from '../data/projectData'

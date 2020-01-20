@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import { Intro } from '../components/Intro'
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/misc/SEO'
 
 export const query = graphql`
   query {
@@ -16,7 +16,7 @@ export const query = graphql`
 
 export default () => (
   <>
-    <SEO title="Portfolio" />
+    <SEO />
     <Intro name="404" desc="whoops" />
   </>
 )
