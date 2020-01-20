@@ -38,13 +38,6 @@ module.exports = {
         path: path.join(__dirname, `static`, `projects`),
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        sitemap: null,
-        policy: [{ userAgent: '*', allow: '/', disallow: '/misc' }],
-      },
-    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -52,5 +45,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-background-image`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/', disallow: '/misc' }],
+      },
+    },
   ],
 }
