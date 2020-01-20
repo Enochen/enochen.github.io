@@ -8,8 +8,8 @@ const scrollTo = id => () => {
   return false
 }
 
-export const onRouteUpdate = ({ location: { hash } }) => {
-  if (hash) {
-    window.setTimeout(scrollTo(hash), 0)
-  }
-}
+// export const onRouteUpdate = ({ location: { hash } }) => {
+//   if (hash) {
+//     //window.setTimeout(scrollTo(hash), 0)
+//   }
+// }
