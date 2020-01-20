@@ -46,6 +46,7 @@ module.exports = {
     `gatsby-background-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preact`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
