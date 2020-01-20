@@ -8,7 +8,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `Enoch Chen`,
-    description: `Hey! I'm Enoch - I do some cool things.`,
+    description: `Hey! I'm Enoch - a Computer Science student at Cornell University. I do cool things sometimes.`,
     siteUrl: `https://enochen.me`,
     author: `Enoch Chen`,
   },
@@ -41,8 +41,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://enochen.me',
-        policy: [{ userAgent: '*', allow: '/$', disallow: '/misc' }],
+        sitemap: null,
+        policy: [{ userAgent: '*', allow: '/', disallow: '/misc' }],
       },
     },
     `gatsby-plugin-typescript`,
