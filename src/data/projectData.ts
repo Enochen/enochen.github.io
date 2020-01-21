@@ -32,6 +32,15 @@ export const ProjectData: ProjectList = {
       image: 'askpalette.png',
     },
     {
+      name: 'This Website',
+      desc:
+        'Over winter break, I decided to learn some new technologies and then put something together. It seemed like a good idea to give you a little glimpse of what I do. This is what came out of it.',
+      tags: ['HTML/CSS', 'TypeScript', 'GatsbyJS', 'GraphQL', 'React/Preact' ],
+      live: '/',
+      github: 'https://github.com/Enochen/portfolio',
+      image: 'portfolio.png',
+    },
+    {
       name: 'Half Bot Half Brain',
       desc:
         'It\'s like Mad Libs, but better. The backend generates grammatically correct text from input with the help of spaCy. Developed as a hackathon project at <a href="https://teenhacksli.com/" target="_blank" rel="noopener">TeenhacksLI</a>.',
