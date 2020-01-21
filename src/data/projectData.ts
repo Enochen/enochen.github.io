@@ -36,7 +36,6 @@ export const ProjectData: ProjectList = {
       desc:
         'Over winter break, I decided to learn some new technologies and then put something together. It seemed like a good idea to give you a little glimpse of what I do. This is what came out of it.',
       tags: ['HTML/CSS', 'TypeScript', 'GatsbyJS', 'GraphQL', 'React/Preact' ],
-      live: '/',
       github: 'https://github.com/Enochen/portfolio',
       image: 'portfolio.png',
     },
