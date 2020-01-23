@@ -15,7 +15,7 @@
     "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "babel-preset-gatsby": "^0.2.27",
     "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^2.19.1",
