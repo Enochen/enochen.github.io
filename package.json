@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@types/compass-vertical-rhythm": "^1.4.0",
-    "@types/jest": "^24.9.0",
+    "@types/jest": "^24.9.1",
     "@types/react-helmet": "^5.0.15",
     "@types/react-scrollable-anchor": "^0.6.0",
     "@types/react-test-renderer": "^16.9.2",
