@@ -8,7 +8,7 @@ import { IntroData } from '../data/introData'
 import { ProjectData } from '../data/projectData'
 
 const handleScroll = () => {
-  if (window.scrollY <= window.innerHeight * 0.20) {
+  if (window.scrollY <= window.innerHeight * 0.2) {
     removeHash()
   }
 }

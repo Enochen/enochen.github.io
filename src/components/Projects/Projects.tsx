@@ -10,22 +10,21 @@ const ext = {
   rel: 'noopener noreferrer',
 }
 
-const findImage = (name: string, imagesGraph: ImagesGraph) => {
-  const result = imagesGraph.allFile.edges.find(
-    ({ node }) => node.relativePath === name
-  )
-  if (result) {
-    return result.node.childImageSharp.fluid
-  }
-  return undefined
-}
-
 const getFluid = (name: string, imagesGraph: ImagesGraph) => {
-  const imageNode = findImage(name, imagesGraph)
+  const findImage = (fileName: string) => {
+    const result = imagesGraph.allFile.edges.find(
+      ({ node }) => node.relativePath === fileName
+    )
+    if (result) {
+      return result.node.childImageSharp.fluid
+    }
+    return undefined
+  }
+  const imageNode = findImage(name)
   if (imageNode) {
     return imageNode
   }
-  return findImage('default.jpg', imagesGraph)
+  return findImage('default.jpg')
 }
 
 interface LinkProps {
