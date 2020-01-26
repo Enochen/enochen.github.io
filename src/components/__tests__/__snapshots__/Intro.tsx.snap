@@ -23,7 +23,7 @@ exports[`Intro Section renders correctly 1`] = `
       </h2>
     </div>
     <div
-      className="sc-fzXfLP kNeCrQ"
+      className="sc-fzXfLP hzkCCf"
     >
       <p
         dangerouslySetInnerHTML={

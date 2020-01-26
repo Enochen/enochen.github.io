@@ -52,7 +52,6 @@ export const About = styled.div`
   padding-top: ${rhythm(1.7)};
   max-height: 0;
   overflow: hidden;
-  transition: height 0.5s;
 `
 
 export const IconGroup = styled.div`
@@ -102,12 +101,11 @@ export const Intro = styled(Section)<SectionProps>`
         ${scale(0.6)};
       }
       ${About} {
+        ${scale(0.2)};
         visibility: visible;
         opacity: 1;
-        max-height: 1000px;
-        ${scale(0.2)};
-        transition: font-size 0.5s, max-height 0.5s, visibility 0.5s,
-          opacity 0.5s;
+        max-height: 50vh;
+        transition: max-height 0.5s, visibility 0.5s, opacity 0.5s;
       }
     `}
 
