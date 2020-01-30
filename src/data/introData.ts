@@ -28,7 +28,7 @@ export const IntroData: IntroInfo = {
   name: 'Enoch Chen',
   desc: 'cs @ cornell',
   aboutData: [
-    'I am currently an undergrad at Cornell University studying Computer Science. I am passionate about designing effective and reliable systems. My goal is to make things that others can enjoy well.',
+    'I am currently an undergrad at Cornell University studying Computer Science. I am passionate about designing effective and reliable systems, and I love getting the details just right. My goal is to make things that others can enjoy well.',
     'In my free time, I like tinkering with keyboards.',
     'Check out some of my stuff <a href = "#projects">here</a>.',
   ],
