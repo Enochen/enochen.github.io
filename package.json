@@ -20,7 +20,7 @@
     "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^2.19.8",
     "gatsby-background-image": "^0.9.13",
-    "gatsby-cli": "^2.8.27",
+    "gatsby-cli": "^2.8.28",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.33",
     "gatsby-plugin-preact": "^3.1.25",
