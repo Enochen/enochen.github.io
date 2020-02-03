@@ -21,7 +21,7 @@ jobs:
       - name: Raise pull request
         uses: actions/github-script@0.4.0
         with:
-          github-token: ${{secrets.UPDATE_DEPENDENCIES_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const { readFileSync } = require('fs');
             const { resolve } = require('path');
