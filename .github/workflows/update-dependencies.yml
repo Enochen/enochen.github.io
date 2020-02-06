@@ -2,7 +2,7 @@ name: Update dependencies
 
 on:
   schedule:
-    - cron: '0 12 * * *' # At 00:00 UTC everyday. https://crontab.guru/#0_12_*_*_*
+    - cron: '0 12 * * *' # At 12:00 UTC everyday. https://crontab.guru/#0_12_*_*_*
 
 jobs:
   build:
