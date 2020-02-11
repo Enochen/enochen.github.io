@@ -51,6 +51,10 @@ const ActionIcon: FC<IconProps> = ({ icon, iconAlt, label, action, state }) => {
   )
 }
 
+const makeAbout = (data: JSX.Element[]) => {
+  return data.map((x, i) => <p key={i}>{x}</p>)
+}
+
 const makeIcons = (data: IconInfo[], state: boolean, action: () => void) => {
   return (
     <IconContext.Provider value={{ size: '42', className: 'icon' }}>
@@ -78,7 +82,7 @@ export const Intro: FC<IntroInfo> = ({
     }
     setAboutOn(!aboutOn)
   }
-  const about = aboutData
+  const about = makeAbout(aboutData)
   const icons = makeIcons(iconData, aboutOn, toggleAboutOn)
   return (
     <styled.Intro aboutActive={aboutOn}>
