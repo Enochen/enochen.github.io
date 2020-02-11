@@ -9,9 +9,9 @@ describe('Intro Section', () => {
       name: 'George Washington',
       desc: 'SWE @ Apple',
       aboutData: [
-        'I am the first President of the United States.',
-        "I am very honest. I robbed an Apple store when I was 6 years old. When my dad confronted me about it, I told the truth. That's how I became the President of the United States.",
-        'My website can be found <a href = "https://www.georgie.com">here</a>.',
+        <p>I am the first President of the United States.</p>,
+        <p>I am very honest. I robbed an Apple store when I was 6 years old. When my dad confronted me about it, I told the truth. That's how I became the President of the United States.</p>,
+        <p>My website can be found <a href = "https://www.georgie.com">here</a>.</p>,
       ],
       iconData: [
         {
