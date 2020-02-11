@@ -1,4 +1,7 @@
+import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { IconType } from 'react-icons'
+
 import {
   FaFlask,
   FaGithub,
@@ -20,7 +23,7 @@ export interface IconInfo {
 export interface IntroInfo {
   name: string
   desc?: string
-  aboutData?: string[]
+  aboutData?: JSX.Element[]
   iconData?: IconInfo[]
 }
 
@@ -28,9 +31,17 @@ export const IntroData: IntroInfo = {
   name: 'Enoch Chen',
   desc: 'cs @ cornell',
   aboutData: [
-    'I am currently an undergrad at Cornell University studying Computer Science. I am passionate about designing effective and reliable systems, and I love getting the details just right. My goal is to make things that others can enjoy well.',
-    'In my free time, I like tinkering with keyboards.',
-    'Check out some of my stuff <a href = "#projects">here</a>.',
+    <p>
+      I am currently an undergrad at Cornell University studying Computer
+      Science. I am passionate about designing effective and reliable systems,
+      and I love getting the details just right. My goal is to make things that
+      others can enjoy well.
+    </p>,
+    <p>In my free time, I like tinkering with keyboards.</p>,
+    <p>
+      Check out some of my stuff{' '}
+      <OutboundLink href="#projects">here</OutboundLink>.
+    </p>,
   ],
   iconData: [
     {
