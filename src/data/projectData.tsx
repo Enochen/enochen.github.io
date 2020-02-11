@@ -19,7 +19,7 @@ export const ProjectData: ProjectList = {
     {
       name: 'cue',
       desc: (
-        <p>
+        <>
           I joined{' '}
           <OutboundLink
             href="https://cornelldti.org"
@@ -32,7 +32,7 @@ export const ProjectData: ProjectList = {
           cue, an event-discovery app for Cornell students at Ithaca. I
           developed a set of scripts to facilitate populating our event database
           with external data.
-        </p>
+        </>
       ),
       tags: ['HTML/CSS', 'Javascript', 'Python', 'ReactJS', 'Django'],
       live: 'https://www.cornelldti.org/Projects/events',
@@ -42,7 +42,7 @@ export const ProjectData: ProjectList = {
     {
       name: 'Ask Palette',
       desc: (
-        <p>
+        <>
           Generate color palettes from your search terms! Uses Google Cloud
           Vision to extract colors from search terms. Developed as a hackathon
           project at{' '}
@@ -54,7 +54,7 @@ export const ProjectData: ProjectList = {
             BigRed//Hacks
           </OutboundLink>
           .
-        </p>
+        </>
       ),
       tags: ['HTML/CSS', 'Python', 'Flask', 'Google Cloud'],
       live: 'https://askpalette.appspot.com/',
@@ -64,11 +64,11 @@ export const ProjectData: ProjectList = {
     {
       name: 'This Website',
       desc: (
-        <p>
+        <>
           Over winter break, I decided to learn some new technologies and use
           them to put something together. It seemed like a good idea to make a
           personal website, and this is what came out of that idea.
-        </p>
+        </>
       ),
       tags: ['HTML/CSS', 'TypeScript', 'GatsbyJS', 'GraphQL', 'React/Preact'],
       github: 'https://github.com/Enochen/portfolio',
@@ -77,7 +77,7 @@ export const ProjectData: ProjectList = {
     {
       name: 'Half Bot Half Brain',
       desc: (
-        <p>
+        <>
           It\'s like Mad Libs, but better. The backend generates grammatically
           correct text from input with the help of spaCy. Developed as a
           hackathon project at{' '}
@@ -89,7 +89,7 @@ export const ProjectData: ProjectList = {
             TeenhacksLI
           </OutboundLink>
           .
-        </p>
+        </>
       ),
       tags: ['HTML/CSS', 'JavaScript', 'Python', 'spaCy'],
       live: 'https://halfbothalfbrain.netlify.com/',
