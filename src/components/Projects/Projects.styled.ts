@@ -1,6 +1,9 @@
+
+
+import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
-import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const Body = styled.div`
   width: 70%;
@@ -40,7 +43,7 @@ export const Tag = styled.div`
   transition: color 1s, background 1s;
 `
 
-export const BodyLink = styled.a`
+export const BodyLink = styled(OutboundLink)`
   color: #6460b8;
   text-decoration: none;
   padding: 5px 12px;
@@ -53,7 +56,7 @@ export const BodyLink = styled.a`
   }
 `
 
-export const ImageLink = styled.a`
+export const ImageLink = styled(OutboundLink)`
   width: 50%;
   display: block;
   overflow: auto;

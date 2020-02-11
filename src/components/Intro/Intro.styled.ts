@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { Section } from '../Section'
 
 export const Header = styled.div`
@@ -71,7 +72,7 @@ export const IntroIcon = styled.div`
   }
 `
 
-export const IconLink = styled.a`
+export const IconLink = styled(OutboundLink)`
   color: hsla(0, 0%, 0%, 0.7);
 `
 
