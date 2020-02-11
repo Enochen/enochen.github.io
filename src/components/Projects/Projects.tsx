@@ -75,7 +75,7 @@ export const Project: FC<ProjectFluid> = ({
       <styled.Body>
         <styled.Name>{name}</styled.Name>
         <styled.TagGroup>{tagData}</styled.TagGroup>
-        <styled.Desc>desc</styled.Desc>
+        <styled.Desc>{desc}</styled.Desc>
         <styled.LinkGroup>{linkData}</styled.LinkGroup>
       </styled.Body>
     </styled.Wrapper>
