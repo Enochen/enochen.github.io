@@ -9,6 +9,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-158208858-1',
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
@@ -31,12 +38,6 @@ module.exports = {
       options: {
         name: `projects`,
         path: path.join(__dirname, `static`, `projects`),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-158208858-1',
       },
     },
     `gatsby-plugin-typescript`,
