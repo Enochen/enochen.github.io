@@ -5807,10 +5807,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-background-image@^0.9.14:
-  version "0.9.14"
-  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.9.14.tgz#55f22665249090464cf753efb5adb6e3ac6fcdd6"
-  integrity sha512-7H40uJre4++dra1xSn6Qksw4b+ge0P5QExKtAIhCWarwMhCCFZEKr0/tMmxADfJx8e4RIomx7oJmDRdunQNCtA==
+gatsby-background-image@^0.9.16:
+  version "0.9.16"
+  resolved "https://registry.yarnpkg.com/gatsby-background-image/-/gatsby-background-image-0.9.16.tgz#8f24794d1b7c0ad30ef9599902bddb086f6845f9"
+  integrity sha512-de+RS5FG25dcwo/zzxHHw6DlA9M0GRbH/3EyrGjePlD/3xZ6pnYokBnJQeEX3IgkVcAlaiPy8r5q0+OF4xcH4g==
   dependencies:
     "@babel/runtime" "^7.8.4"
     filter-invalid-dom-props "^2.0.0"
@@ -6097,10 +6097,10 @@ gatsby-transformer-sharp@^2.3.14:
     semver "^5.7.1"
     sharp "^0.23.4"
 
-gatsby@^2.19.16:
-  version "2.19.16"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.16.tgz#9b302f4159b983b603341f1aba8b6d48c4bbb453"
-  integrity sha512-p+hHj68rD5ebyJaxBd9RCCloiEK7WteWLSf1K/Ak7SnrGih4f3UCW0Ue1NaA+gzwi43YQ+IEGFDFwwTuEM4mWg==
+gatsby@^2.19.17:
+  version "2.19.17"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.17.tgz#f512b251d9aeb688bed270f3c2e490887edd2ee8"
+  integrity sha512-XJIW61osX5u/DltfAp0OkevQjHbCoRnzUfAElwwUTstUvlLCq4Ihz/1nX8+hp6e1/fxF2e/WRPD1HoDPacsKhQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.5"
