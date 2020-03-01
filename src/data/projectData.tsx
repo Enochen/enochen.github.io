@@ -17,7 +17,7 @@ export interface ProjectList {
 export const ProjectData: ProjectList = {
   data: [
     {
-      name: 'cue',
+      name: 'eve',
       desc: (
         <>
           I joined{' '}
@@ -29,7 +29,7 @@ export const ProjectData: ProjectList = {
             Cornell Design & Tech Initiative
           </OutboundLink>{' '}
           in Fall 2019 as a Full Stack Developer. My team is responsible for
-          cue, an event-discovery app for Cornell students at Ithaca. I
+          eve, an event-discovery app for Cornell students at Ithaca. I
           developed a set of scripts to facilitate populating our event database
           with external data.
         </>
@@ -37,7 +37,7 @@ export const ProjectData: ProjectList = {
       tags: ['HTML/CSS', 'Javascript', 'Python', 'ReactJS', 'Django'],
       live: 'https://www.cornelldti.org/Projects/events',
       github: 'https://github.com/cornell-dti/events-backend/',
-      image: 'cue.jpg',
+      image: 'eve.jpg',
     },
     {
       name: 'Ask Palette',
