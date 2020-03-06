@@ -18,7 +18,7 @@
     "babel-jest": "^25.1.0",
     "babel-preset-gatsby": "^0.2.29",
     "compass-vertical-rhythm": "^1.4.5",
-    "gatsby": "^2.19.28",
+    "gatsby": "^2.19.29",
     "gatsby-background-image": "^0.10.2",
     "gatsby-cli": "^2.10.0",
     "gatsby-plugin-gtag-outbound": "^1.0.4",
