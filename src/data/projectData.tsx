@@ -1,5 +1,5 @@
 import React from 'react'
-import { OutboundLink } from 'gatsby-plugin-gtag-outbound'
+import { OutboundLink } from 'gatsby-plugin-gtag'
 
 export interface ProjectInfo {
   name: string
@@ -17,6 +17,27 @@ export interface ProjectList {
 export const ProjectData: ProjectList = {
   data: [
     {
+      name: 'Moody',
+      desc: (
+        <>
+          Mood-tracking app with a chatbot that sends you memes! What began as
+          an offhand comment became a wacky twist on the mental health tech
+          space. Hackathon Finalist at{' '}
+          <OutboundLink
+            href="https://hackourcampus.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            HackOurCampus
+          </OutboundLink>
+          .
+        </>
+      ),
+      tags: ['TypeScript', 'React Native', 'Google Cloud DialogFlow'],
+      github: 'https://github.com/Enochen/hoc20-mobile',
+      image: 'moody.jpg',
+    },
+    {
       name: 'eve',
       desc: (
         <>
@@ -29,12 +50,12 @@ export const ProjectData: ProjectList = {
             Cornell Design & Tech Initiative
           </OutboundLink>{' '}
           in Fall 2019 as a Full Stack Developer. My team is responsible for
-          eve, an event-discovery app for Cornell students at Ithaca. I
-          developed a set of scripts to facilitate populating our event database
-          with external data.
+          eve, an event-discovery app for Cornell students at Ithaca. I've had a
+          hand in many parts of the project, from helpful external scripts to an
+          authentication system.
         </>
       ),
-      tags: ['HTML/CSS', 'Javascript', 'Python', 'ReactJS', 'Django'],
+      tags: ['TypeScript', 'Express', 'Firebase', 'React'],
       live: 'https://www.cornelldti.org/Projects/events',
       github: 'https://github.com/cornell-dti/events-backend/',
       image: 'eve.jpg',
@@ -56,7 +77,7 @@ export const ProjectData: ProjectList = {
           .
         </>
       ),
-      tags: ['HTML/CSS', 'Python', 'Flask', 'Google Cloud'],
+      tags: ['HTML/CSS', 'Python', 'Flask', 'Google Cloud Vision'],
       live: 'https://askpalette.appspot.com/',
       github: 'https://github.com/Enochen/askpalette',
       image: 'askpalette.png',
@@ -70,7 +91,7 @@ export const ProjectData: ProjectList = {
           personal website, and this is what came out of that idea.
         </>
       ),
-      tags: ['HTML/CSS', 'TypeScript', 'GatsbyJS', 'GraphQL', 'React/Preact'],
+      tags: ['HTML/CSS', 'TypeScript', 'GatsbyJS', 'GraphQL', 'React'],
       github: 'https://github.com/Enochen/portfolio',
       image: 'portfolio.png',
     },

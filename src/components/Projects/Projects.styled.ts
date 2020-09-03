@@ -3,7 +3,7 @@
 import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
-import { OutboundLink } from 'gatsby-plugin-gtag-outbound'
+import { OutboundLink } from 'gatsby-plugin-gtag'
 
 export const Body = styled.div`
   width: 70%;

@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-gtag-outbound`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: 'UA-158208858-1',
         head: false,
@@ -49,7 +49,6 @@ module.exports = {
     `gatsby-background-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-preact`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

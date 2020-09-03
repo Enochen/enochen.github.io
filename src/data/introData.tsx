@@ -1,5 +1,5 @@
 import React from 'react'
-import { OutboundLink } from 'gatsby-plugin-gtag-outbound'
+import { OutboundLink } from 'gatsby-plugin-gtag'
 import { IconType } from 'react-icons'
 
 import {
@@ -34,10 +34,13 @@ export const IntroData: IntroInfo = {
     <>
       I am currently an undergrad at Cornell University studying Computer
       Science. I am passionate about designing effective and reliable systems,
-      and I love getting the details just right. My goal is to make things that
-      others can enjoy well.
+      and I love getting the details just right. I want to make things that
+      others can enjoy!
     </>,
-    <>In my free time, I like tinkering with keyboards.</>,
+    <>
+      In my free time, you can find me juggling, tinkering with keyboards, or
+      just thinking about life.
+    </>,
     <>
       Check out some of my stuff{' '}
       <OutboundLink href="#projects">here</OutboundLink>.

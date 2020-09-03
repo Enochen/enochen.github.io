@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { rhythm, scale, TABLET_MEDIA_QUERY } from '../../utils/typography'
-import { OutboundLink } from 'gatsby-plugin-gtag-outbound'
+import { OutboundLink } from 'gatsby-plugin-gtag'
 import { Section } from '../Section'
 
 export const Header = styled.div`
