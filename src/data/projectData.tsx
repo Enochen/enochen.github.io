@@ -38,6 +38,20 @@ export const ProjectData: ProjectList = {
       image: 'moody.jpg',
     },
     {
+      name: '#outbreak;;',
+      desc: (
+        <>
+          Pick a disease, pick a starting country, and buy upgrades to infect the whole
+          world before a vaccine is found! Plague Inc-inspired game with a React
+          web frontend and a backend server written in OCaml. Developed by a
+          team of 3 for the final project of CS 3110 (Functional Programming).
+        </>
+      ),
+      tags: ['OCaml', 'React', 'HTML/CSS', 'JavaScript'],
+      github: 'https://github.com/ptwu/outbreak',
+      image: 'outbreak.png',
+    },
+    {
       name: 'eve',
       desc: (
         <>
