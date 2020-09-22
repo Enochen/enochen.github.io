@@ -72,7 +72,7 @@ export const IntroData: IntroInfo = {
     {
       icon: FaGraduationCap,
       label: 'Transcript',
-      link: '/misc/2020-02-02-Transcript.pdf',
+      link: '/misc/2020-06-05-Transcript.pdf',
       external: true,
     },
     {
