@@ -2,28 +2,28 @@
 
 exports[`Error Page renders correctly 1`] = `
 <div
-  className="sc-AxjAm kiCCiV sc-fznZeY dxuBCw"
+  className="sc-bdnylx hIdRAQ sc-bqGHjH hLMTUB"
 >
   <div
-    className="sc-AxhCb cPqAfH"
+    className="sc-hKFyIo eWsAkW"
   >
     <div
-      className="sc-AxhUy dyROGL"
+      className="sc-eCApGN kkZXBL"
     >
       <h1
-        className="sc-AxheI hsSckG"
+        className="sc-gKAblj kFnSlV"
       >
         Whoopsiess
       </h1>
       <h2
-        className="sc-AxmLO iNTUqA"
+        className="sc-fujyUd khRgyl"
       >
         40404 we did a whoooopsiess
       </h2>
     </div>
   </div>
   <div
-    className="sc-fzpans gAmEVq"
+    className="sc-kEqYlL bsUMBb"
   />
 </div>
 `;
