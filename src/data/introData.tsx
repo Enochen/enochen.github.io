@@ -70,12 +70,6 @@ export const IntroData: IntroInfo = {
       external: true,
     },
     {
-      icon: FaGraduationCap,
-      label: 'Transcript',
-      link: '/misc/2020-06-05-Transcript.pdf',
-      external: true,
-    },
-    {
       icon: FaNewspaper,
       label: 'Resume',
       link: '/misc/Enoch Chen resume.pdf',
