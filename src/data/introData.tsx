@@ -5,7 +5,6 @@ import { IconType } from 'react-icons'
 import {
   FaFlask,
   FaGithub,
-  FaGraduationCap,
   FaLinkedin,
   FaNewspaper,
   FaRegUser,

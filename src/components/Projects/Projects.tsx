@@ -12,19 +12,12 @@ const ext = {
 
 const getFluid = (name: string, imagesGraph: ImagesGraph) => {
   const findImage = (fileName: string) => {
-    const result = imagesGraph.allFile.edges.find(
+    const result = imagesGraph.allFile.edges?.find(
       ({ node }) => node.relativePath === fileName
     )
-    if (result) {
-      return result.node.childImageSharp.fluid
-    }
-    return undefined
+    return result?.node.childImageSharp.fluid
   }
-  const imageNode = findImage(name)
-  if (imageNode) {
-    return imageNode
-  }
-  return findImage('default.jpg')
+  return findImage(name) || findImage('default.jpg')
 }
 
 interface LinkProps {
@@ -33,11 +26,11 @@ interface LinkProps {
 }
 
 const makeTags = (data: string[]) => {
-  return data.map(x => <styled.Tag key={x}>{x}</styled.Tag>)
+  return data.map((tag) => <styled.Tag key={tag}>{tag}</styled.Tag>)
 }
 
 const makeLinks = (data: LinkProps[]) => {
-  return data.map(x => (
+  return data.map((x) => (
     <styled.BodyLink key={x.label} href={x.url} {...ext}>
       {x.label}
     </styled.BodyLink>
@@ -45,7 +38,7 @@ const makeLinks = (data: LinkProps[]) => {
 }
 
 interface ProjectFluid extends ProjectInfo {
-  fluid: Fluid
+  fluid?: Fluid
 }
 
 export const Project: FC<ProjectFluid> = ({
