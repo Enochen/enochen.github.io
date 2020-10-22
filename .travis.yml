@@ -10,7 +10,10 @@ deploy:
   commit_message: 'Automated Deployment'
   keep_history: false
   on:
-    branch: master
+    branch: main
+branches:
+  only:
+    - main
 before_script:
   - 'yarn install'
 script:
