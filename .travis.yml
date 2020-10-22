@@ -3,12 +3,14 @@ node_js:
   - 'stable'
 cache: yarn
 deploy:
+  strategy: git
   provider: pages
   edge: true
-  github-token: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   local_dir: public
   commit_message: 'Automated Deployment'
   keep_history: false
+  script: 'yarn deploy'
   on:
     branch: main
 branches:
