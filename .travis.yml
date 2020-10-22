@@ -12,7 +12,6 @@ deploy:
   on:
     branch: master
 before_script:
-  - "yarn add gatsby"
   - "yarn install"
 script:
   - "yarn test"
