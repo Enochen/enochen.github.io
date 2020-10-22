@@ -1,19 +1,17 @@
 language: node_js
 node_js:
-  - "stable"
+  - 'stable'
 cache: yarn
 deploy:
   provider: pages
   edge: true
   github-token: $GITHUB_TOKEN
   local_dir: public
-  commit_message: "Automated Deployment"
+  commit_message: 'Automated Deployment'
   keep_history: false
   on:
     branch: master
 before_script:
-  - "yarn install"
+  - 'yarn install'
 script:
-  - "yarn test"
-after_success:
-  - "yarn deploy"
+  - 'yarn test'
