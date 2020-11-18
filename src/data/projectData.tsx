@@ -113,7 +113,7 @@ export const ProjectData: ProjectList = {
       name: 'Half Bot Half Brain',
       desc: (
         <>
-          It\'s like Mad Libs, but better. The backend generates grammatically
+          It's like Mad Libs, but better. The backend generates grammatically
           correct text from input with the help of spaCy. Developed as a
           hackathon project at{' '}
           <OutboundLink
