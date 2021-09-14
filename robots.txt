@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /misc
+Sitemap: https://enochen.me/sitemap.xml
+Host: https://enochen.me
