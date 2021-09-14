@@ -71,7 +71,7 @@ export const IntroData: IntroInfo = {
     {
       icon: FaNewspaper,
       label: 'Resume',
-      link: '/misc/Enoch Chen resume.pdf',
+      link: '/misc/enoch_chen_resume.pdf',
       external: true,
     },
   ],
